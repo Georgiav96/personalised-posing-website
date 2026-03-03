@@ -10,6 +10,37 @@ const heroBackground = `${import.meta.env.BASE_URL}images/hero-background.jpg`
 const transformImage = `${import.meta.env.BASE_URL}images/driven-section.jpg`
 const commitmentImage = '/images/marketing-shoot/05102025_GeorgiaVoice_High-805.jpg'
 
+// Autoplay video component - plays when scrolled into view
+function AutoplayVideo() {
+  const containerRef = useRef(null)
+  const videoRef = useRef(null)
+  const isInView = useInView(containerRef, { once: false, amount: 0.3 })
+  
+  useEffect(() => {
+    if (videoRef.current) {
+      if (isInView) {
+        videoRef.current.play().catch(() => {})
+      } else {
+        videoRef.current.pause()
+      }
+    }
+  }, [isInView])
+  
+  return (
+    <div ref={containerRef} className="w-full">
+      <video
+        ref={videoRef}
+        className="w-full h-auto object-cover"
+        src="/videos/action-video-web.mp4"
+        muted
+        loop
+        playsInline
+        preload="metadata"
+      />
+    </div>
+  )
+}
+
 // Scroll reveal wrapper component
 function RevealOnScroll({ children, className = '', delay = 0, direction = 'up' }) {
   const ref = useRef(null)
@@ -383,11 +414,11 @@ function Home() {
         </div>
       </section>
 
-      {/* Video Section */}
-      <section className="section-padding bg-[#0a0a0a] relative overflow-hidden">
+      {/* Video Section - Full Width Autoplay */}
+      <section className="bg-[#0a0a0a] relative overflow-hidden">
         <FloatingParticles dark />
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <RevealOnScroll className="text-center mb-8">
+        <div className="relative z-10 text-center py-12 md:py-16">
+          <RevealOnScroll className="mb-8 px-4">
             <span className="badge-dark mb-4">
               See It In Action
             </span>
@@ -395,19 +426,8 @@ function Home() {
               Watch How I <span className="text-brand-purple text-glow">Help Athletes Shine</span>
             </h2>
           </RevealOnScroll>
-          <RevealOnScroll delay={0.2}>
-            <div className="relative rounded-2xl overflow-hidden" style={{ paddingBottom: '56.25%' }}>
-              <iframe
-                className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/7YSnuSpq_l8"
-                title="Personalised Posing"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          </RevealOnScroll>
         </div>
+        <AutoplayVideo />
       </section>
 
       {/* Services Section - Dark with glowing icons */}

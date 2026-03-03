@@ -227,17 +227,20 @@ const testimonials = [
     quote: "Georgia offers such a unique and beautifully quirky approach to her services. She gave me confidence and believed in my ability — taking out two National Pro Cards for Fitness plus incredible posing compliments from ICN Worldwide Commentators.",
     name: 'Kirra Ward',
     title: 'Fitness Pro (NBA & ICN)',
+    image: `${import.meta.env.BASE_URL}images/testimonial-kirra.jpg`,
     featured: true,
   },
   {
     quote: "She has become a sister, an icon, a mentor and a role model to me. Everything is so special and personalised. She helped me see my potential and always wants the best for her clients.",
     name: 'Taylor Lawrence',
     title: 'Bikini Pro',
+    image: `${import.meta.env.BASE_URL}images/testimonial-taylor.jpg`,
   },
   {
     quote: "Georgia puts in 110% effort into every one of her posing clients. She really has a great eye for making you look incredible in front of the judges!",
     name: 'Olivia Peskett',
     title: 'Sports Model Pro',
+    image: `${import.meta.env.BASE_URL}images/testimonial-olivia.jpg`,
   },
 ]
 
@@ -528,7 +531,16 @@ function Home() {
           <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.15}>
             {testimonials.map((testimonial, index) => (
               <StaggerItem key={index}>
-                <div className={testimonial.featured ? 'bento-card-dark-featured h-full' : 'testimonial-card-dark h-full'}>
+                <div className={testimonial.featured ? 'bento-card-dark-featured h-full flex flex-col' : 'testimonial-card-dark h-full flex flex-col'}>
+                  {testimonial.image && (
+                    <div className="w-20 h-20 rounded-full overflow-hidden mb-4 border-2 border-brand-purple/30">
+                      <img 
+                        src={testimonial.image} 
+                        alt={testimonial.name}
+                        className="w-full h-full object-cover object-top"
+                      />
+                    </div>
+                  )}
                   <div className="flex items-center gap-1 mb-4 text-brand-purple">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 fill-current" />

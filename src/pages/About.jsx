@@ -290,17 +290,11 @@ function About() {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <RevealOnScroll direction="left" className="order-2 lg:order-1">
-              <span className="badge-dark mb-4">
-                My Background
-              </span>
               <h2 className="text-3xl md:text-4xl font-heading mb-6 text-white">
-                This Isn't Just About <span className="text-brand-purple text-glow">Poses...</span>
+                My <span className="text-brand-purple text-glow">Background</span>
               </h2>
               <p className="text-white/70 leading-relaxed mb-6">
-                My background in acting and performing arts taught me that every person brings their own life experience into their body. Confidence, fear, identity, pressure — it all shows up on stage.
-              </p>
-              <p className="text-white/70 leading-relaxed mb-6">
-                That's why I don't copy and paste routines or treat athletes like they're the same.
+                This isn't just about poses. My background in acting and performing arts taught me that every person brings their own life experience into their body. Confidence, fear, identity, pressure — it all shows up on stage. That's why I don't copy and paste routines or treat athletes like they're the same.
               </p>
               
               <div className="glass-card-dark p-6">

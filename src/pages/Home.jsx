@@ -158,18 +158,21 @@ const services = [
     description: 'Personalised posing guidance tailored to your physique, division, and federation.',
     link: '/services#coaching',
     featured: true,
+    image: '/images/service-coaching.jpg',
   },
   {
     icon: Calendar,
     title: 'Workshops',
     description: 'Group sessions and intensive workshop experiences for competition prep.',
     link: '/workshops',
+    image: '/images/service-workshops.jpg',
   },
   {
     icon: Heart,
     title: 'Community Events',
     description: 'Connect with like-minded women through social events and wellness activities.',
     link: '/events',
+    image: '/images/service-events.jpg',
   },
 ]
 
@@ -419,9 +422,18 @@ function Home() {
               <StaggerItem key={index}>
                 <Link 
                   to={service.link}
-                  className={service.featured ? 'bento-card-dark-featured group block' : 'bento-card-dark group block'}
+                  className={`${service.featured ? 'bento-card-dark-featured' : 'bento-card-dark'} group block overflow-hidden`}
                 >
-                  <GlowingIcon icon={service.icon} className="mb-6" />
+                  {service.image && (
+                    <div className="h-40 -mx-8 -mt-8 mb-6 overflow-hidden">
+                      <img 
+                        src={service.image} 
+                        alt={service.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  )}
+                  <GlowingIcon icon={service.icon} className="mb-4" />
                   <h3 className="text-xl font-heading mb-3 text-white">
                     {service.title}
                   </h3>

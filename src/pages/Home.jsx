@@ -245,7 +245,7 @@ const faqs = [
   },
   {
     question: 'How far out from competition should I start?',
-    answer: 'Ideally, 12-16 weeks out gives us plenty of time. However, I can work with tighter timelines — even a few sessions can make a significant difference.',
+    answer: 'I recommend starting 20-30 weeks out for the best results — this gives us time to build strong foundations and muscle memory. For tighter timelines (16-20 weeks), weekly sessions are essential. I generally don\'t take on new ongoing clients under 16 weeks out.',
   },
   {
     question: 'Which federations do you coach?',

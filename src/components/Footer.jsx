@@ -89,7 +89,6 @@ function Footer() {
       {/* Federations */}
       <div className="border-t border-white/10">
         <div className="max-w-6xl mx-auto px-6 py-8">
-          <p className="text-center text-white/40 text-sm mb-4">Coaching athletes across all major federations</p>
           <div className="flex flex-wrap justify-center items-center gap-8 text-white/40">
             <span className="text-sm font-semibold hover:text-brand-purple transition-colors">ICN</span>
             <span className="text-sm font-semibold hover:text-brand-purple transition-colors">IFBB/NPC</span>

@@ -189,12 +189,17 @@ function Events() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: Users, title: 'Prep Socials', desc: 'Low-key catch-ups with prep-friendly food and support.' },
-              { icon: Calendar, title: 'Wellness Days', desc: 'Self-care featuring mobility, mindfulness, and recovery.' },
-              { icon: MapPin, title: 'Comp Support', desc: 'Group trips to cheer each other at competitions!' },
+              { icon: Users, title: 'Prep Socials', desc: 'Low-key catch-ups with prep-friendly food and support.', image: '/images/events/wellness-prepsocials.jpg' },
+              { icon: Calendar, title: 'Wellness Days', desc: 'Self-care featuring mobility, mindfulness, and recovery.', image: '/images/events/wellness-prepsocials.jpg' },
+              { icon: MapPin, title: 'Comp Support', desc: 'Group trips to cheer each other at competitions!', image: '/images/events/comp-support.jpg' },
             ].map((item, index) => (
               <RevealOnScroll key={index} delay={index * 0.1}>
-                <div className="bento-card-dark group">
+                <div className="bento-card-dark group overflow-hidden">
+                  {item.image && (
+                    <div className="aspect-video -mx-6 -mt-6 mb-6 overflow-hidden">
+                      <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                  )}
                   <GlowingIcon icon={item.icon} className="mb-6" />
                   <h3 className="text-xl font-heading text-white mb-3">{item.title}</h3>
                   <p className="text-white/70">{item.desc}</p>

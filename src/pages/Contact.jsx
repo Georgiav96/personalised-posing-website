@@ -202,7 +202,7 @@ function Contact() {
 
       {/* Book a Discovery Call - Dark */}
       <section className="py-16 bg-[#0a0a0a] relative overflow-hidden">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
           <RevealOnScroll>
             <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-heading text-white mb-4">
@@ -217,10 +217,10 @@ function Contact() {
                 src="https://app.acuityscheduling.com/schedule.php?owner=30497349&appointmentType=89946196&ref=embedded_csp" 
                 title="Schedule Appointment" 
                 width="100%" 
-                height="700" 
+                height="800" 
                 frameBorder="0"
                 className="rounded-xl"
-                style={{ minHeight: '700px' }}
+                style={{ minHeight: '800px' }}
               />
             </div>
           </RevealOnScroll>

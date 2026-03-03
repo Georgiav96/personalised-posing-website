@@ -386,8 +386,35 @@ function Home() {
         </div>
       </section>
 
-      {/* Services Section - Dark with glowing icons */}
+      {/* Video Section */}
       <section className="section-padding bg-[#0a0a0a] relative overflow-hidden">
+        <FloatingParticles dark />
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <RevealOnScroll className="text-center mb-8">
+            <span className="badge-dark mb-4">
+              See It In Action
+            </span>
+            <h2 className="text-3xl md:text-4xl font-heading text-white mb-4">
+              Watch How I <span className="text-brand-purple text-glow">Help Athletes Shine</span>
+            </h2>
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.2}>
+            <div className="relative rounded-2xl overflow-hidden" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/7YSnuSpq_l8"
+                title="Personalised Posing"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </RevealOnScroll>
+        </div>
+      </section>
+
+      {/* Services Section - Dark with glowing icons */}
+      <section className="section-padding bg-[#0f0f0f] relative overflow-hidden">
         <FloatingParticles dark />
         
         <div className="relative z-10 max-w-6xl mx-auto">

@@ -425,11 +425,11 @@ function Home() {
                   className={`${service.featured ? 'bento-card-dark-featured' : 'bento-card-dark'} group block overflow-hidden`}
                 >
                   {service.image && (
-                    <div className="h-40 -mx-8 -mt-8 mb-6 overflow-hidden">
+                    <div className="h-48 -mx-8 -mt-8 mb-6 overflow-hidden">
                       <img 
                         src={service.image} 
                         alt={service.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
                   )}

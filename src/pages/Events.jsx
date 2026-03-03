@@ -116,14 +116,44 @@ function Events() {
             </p>
           </RevealOnScroll>
           
-          <RevealOnScroll delay={0.1}>
-            <div className="glass-card-dark-purple p-8 text-center">
-              <GlowingIcon icon={Camera} className="mx-auto mb-4 w-16 h-16" />
-              <p className="text-white/80 mb-4">Team shoot gallery coming soon!</p>
-              <p className="text-sm text-white/60">
-                Follow <a href="https://instagram.com/personalisedposing" target="_blank" rel="noopener noreferrer" className="text-brand-purple hover:underline">@personalisedposing</a> for the latest.
-              </p>
-            </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            <RevealOnScroll delay={0.1}>
+              <div className="glass-card-dark overflow-hidden group">
+                <div className="aspect-[3/4] overflow-hidden">
+                  <img 
+                    src="/images/team-shoot-1year.jpg" 
+                    alt="Personalised Posing 1 Year Celebration Team Shoot 2024" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-heading text-white mb-2">1 Year Celebration</h3>
+                  <p className="text-white/60 text-sm">Our first team shoot celebrating 1 year of Personalised Posing (2024)</p>
+                </div>
+              </div>
+            </RevealOnScroll>
+            
+            <RevealOnScroll delay={0.2}>
+              <div className="glass-card-dark overflow-hidden group">
+                <div className="aspect-[3/4] overflow-hidden">
+                  <img 
+                    src="/images/team-shoot-christmas-1.jpg" 
+                    alt="Personalised Posing Christmas Team Shoot" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-heading text-white mb-2">Christmas Shoot</h3>
+                  <p className="text-white/60 text-sm">Festive team shoot with our amazing athletes</p>
+                </div>
+              </div>
+            </RevealOnScroll>
+          </div>
+          
+          <RevealOnScroll delay={0.3} className="mt-8 text-center">
+            <p className="text-white/60">
+              Follow <a href="https://instagram.com/personalisedposing" target="_blank" rel="noopener noreferrer" className="text-brand-purple hover:underline">@personalisedposing</a> for updates on upcoming shoots.
+            </p>
           </RevealOnScroll>
         </div>
       </section>

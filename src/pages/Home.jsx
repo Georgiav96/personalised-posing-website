@@ -6,7 +6,7 @@ import { ArrowRight, Star, ChevronDown, ChevronUp, Check, X, Users, Calendar, Tr
 // Marketing photos
 const heroImage = '/images/georgia-hero-composite.jpg'
 const aboutImage = '/images/georgia-about.jpg'
-const transformImage = '/images/marketing-shoot/05102025_GeorgiaVoice_High-931.jpg'
+const transformImage = `${import.meta.env.BASE_URL}images/driven-section.jpg`
 const commitmentImage = '/images/marketing-shoot/05102025_GeorgiaVoice_High-805.jpg'
 
 // Scroll reveal wrapper component

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Ultimate Show Day Packing Checklist | Personalised Posing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a0a20 100%);
+      color: #ffffff;
+      min-height: 100vh;
+      padding: 40px;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid rgba(149, 0, 255, 0.3);
+    }
+    
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #9500ff;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+    
+    .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+    
+    .title span {
+      color: #9500ff;
+    }
+    
+    .subtitle {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    
+    .intro-box {
+      background: linear-gradient(135deg, rgba(149, 0, 255, 0.2) 0%, rgba(149, 0, 255, 0.05) 100%);
+      border: 1px solid rgba(149, 0, 255, 0.3);
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    
+    .intro-box p {
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.7;
+    }
+    
+    /* Sections */
+    .section {
+      margin-bottom: 35px;
+    }
+    
+    .section-header {
+      background: linear-gradient(90deg, #9500ff 0%, #bf5fff 100%);
+      padding: 12px 24px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    
+    .section-header h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: white;
+    }
+    
+    .subsection {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 15px;
+    }
+    
+    .subsection h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: #ffffff;
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(149, 0, 255, 0.3);
+    }
+    
+    .checklist {
+      list-style: none;
+    }
+    
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 8px 0;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    
+    .checkbox {
+      width: 18px;
+      height: 18px;
+      border: 2px solid #9500ff;
+      border-radius: 4px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    
+    .note {
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 13px;
+    }
+    
+    /* Pro Tip Box */
+    .pro-tip {
+      background: linear-gradient(135deg, rgba(149, 0, 255, 0.15) 0%, rgba(149, 0, 255, 0.05) 100%);
+      border-left: 4px solid #9500ff;
+      padding: 15px 20px;
+      margin-top: 15px;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .pro-tip strong {
+      color: #9500ff;
+    }
+    
+    .pro-tip p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.6;
+    }
+    
+    /* Footer */
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 30px;
+      border-top: 2px solid rgba(149, 0, 255, 0.3);
+    }
+    
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: #9500ff;
+      margin-bottom: 10px;
+    }
+    
+    .footer p {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+    
+    .footer a {
+      color: #9500ff;
+      text-decoration: none;
+    }
+    
+    .heart {
+      color: #9500ff;
+    }
+    
+    /* Page break hints for PDF */
+    .page-break {
+      page-break-before: always;
+    }
+    
+    @media print {
+      body {
+        background: #0a0a0a;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">Personalised Posing</div>
+      <h1 class="title">Your Ultimate <span>Show Day</span> Packing Checklist</h1>
+      <p class="subtitle">Everything you need for a stress-free comp day</p>
+    </div>
+    
+    <div class="intro-box">
+      <p>From one competitor to another: it's always better to be over-prepared than under-prepared! Pack your comp day bag a few days early to avoid stress, double-check everything, and feel stage-ready with confidence.</p>
+    </div>
+    
+    <!-- Stage Essentials -->
+    <div class="section">
+      <div class="section-header">
+        <h2>✦ Stage Essentials</h2>
+      </div>
+      
+      <div class="subsection">
+        <h3>Main Stagewear</h3>
+        <ul class="checklist">
+          <li><div class="checkbox"></div>Competition bikini or costume <span class="note">(double-check all connectors!)</span></li>
+          <li><div class="checkbox"></div>Federation-approved heels</li>
+          <li><div class="checkbox"></div>Jewellery <span class="note">(earrings, bracelet, ring)</span></li>
+          <li><div class="checkbox"></div>Competition number & safety pins</li>
+        </ul>
+      </div>
+      
+      <div class="subsection">
+        <h3>Secure & Stay-Put Items</h3>
+        <ul class="checklist">
+          <li><div class="checkbox"></div>Bikini Bite or fabric glue <span class="note">(to help keep costume in place)</span></li>
+          <li><div class="checkbox"></div>Safety pins <span class="note">(for number or emergency fastening)</span></li>
+        </ul>
+      </div>
+      
+      <div class="subsection">
+        <h3>Back-Up Options</h3>
+        <ul class="checklist">
+          <li><div class="checkbox"></div>Spare connectors</li>
+          <li><div class="checkbox"></div>Back-up bikini or costume <span class="note">(if possible)</span></li>
+          <li><div class="checkbox"></div>Back-up heels <span class="note">(if possible)</span></li>
+        </ul>
+      </div>
+      
+      <div class="pro-tip">
+        <p><strong>💜 Pro tip:</strong> Pack a mini pump-up bag with essentials like pump bands, tan/hair/makeup touch-ups, and pre-stage snacks so you're not running back and forth between your main bag and the stage area.</p>
+      </div>
+    </div>
+    
+    <!-- Backstage & Comfort -->
+    <div class="section">
+      <div class="section-header">
+        <h2>✦ Backstage & Comfort Essentials</h2>
+      </div>
+      
+      <div class="subsection">
+        <h3>Pre-Stage Wear & Essentials</h3>
+        <ul class="checklist">
+          <li><div class="checkbox"></div>Tan suit <span class="note">(worn to/from tan and while top coat dries)</span></li>
+          <li><div class="checkbox"></div>Robe <span class="note">(to wear over bikini while waiting backstage)</span></li>
+          <li><div class="checkbox"></div>Slippers <span class="note">(easy to slip on, tan-safe)</span></li>
+          <li><div class="checkbox"></div>Pillow & blanket <span class="note">(stay comfy during the backstage wait)</span></li>
+          <li><div class="checkbox"></div>Resistance bands or light dumbbells <span class="note">(for pump-up)</span></li>
+        </ul>
+      </div>
+      
+      <div class="subsection">
+        <h3>Post-Stage Comfort</h3>
+        <ul class="checklist">
+          <li><div class="checkbox"></div>Comfy post-show clothes <span class="note">(dark/tan-safe)</span></li>
+        </ul>
+      </div>
+      
+      <div class="subsection">
+        <h3>Organisation & Entertainment</h3>
+        <ul class="checklist">
+          <li><div class="checkbox"></div>Clear zip bags or packing cubes <span class="note">(to organise outfits, jewellery, or makeup by stage order or category)</span></li>
+          <li><div class="checkbox"></div>Calming tools <span class="note">(book, podcast, journal, etc.)</span></li>
+          <li><div class="checkbox"></div>Headphones or earphones</li>
+          <li><div class="checkbox"></div>Phone charger or portable power bank</li>
+        </ul>
+      </div>
+      
+      <div class="pro-tip">
+        <p><strong>💜 Pro tip:</strong> Bring an umbrella in case it rains when walking from your car to the venue — it's a simple way to protect your tan from water spots before stepping on stage.</p>
+      </div>
+    </div>
+    
+    <!-- Food, Fuel & Hydration -->
+    <div class="section">
+      <div class="section-header">
+        <h2>✦ Food, Fuel & Hydration</h2>
+      </div>
+      
+      <div class="subsection">
+        <h3>Pre-Stage Fuel</h3>
+        <ul class="checklist">
+          <li><div class="checkbox"></div>Meal prep & carb-up snacks <span class="note">(as per coach's instructions)</span></li>
+          <li><div class="checkbox"></div>Esky or insulated lunch bag <span class="note">(to keep meals fresh)</span></li>
+          <li><div class="checkbox"></div>Food scales <span class="note">(to weigh out food accurately)</span></li>
+        </ul>
+      </div>
+      
+      <div class="subsection">
+        <h3>Hydration</h3>
+        <ul class="checklist">
+          <li><div class="checkbox"></div>Water bottle <span class="note">(non-glass)</span></li>
+          <li><div class="checkbox"></div>Electrolytes or hydration tablets</li>
+        </ul>
+      </div>
+      
+      <div class="subsection">
+        <h3>Utensils & Meal Tools</h3>
+        <ul class="checklist">
+          <li><div class="checkbox"></div>Reusable straw <span class="note">(to protect lipstick or avoid smudging)</span></li>
+          <li><div class="checkbox"></div>Cutlery, container or plate, and napkins</li>
+        </ul>
+      </div>
+      
+      <div class="subsection">
+        <h3>Post-Show Recovery</h3>
+        <ul class="checklist">
+          <li><div class="checkbox"></div>Post-comp meal <span class="note">(prepped in advance)</span></li>
+        </ul>
+      </div>
+      
+      <div class="pro-tip">
+        <p><strong>💜 Note:</strong> Shows can sometimes run late or get pushed back unexpectedly. It's smart to bring extra food (as per your coach's advice) to ensure you stay fuelled and focused right up until your time on stage.</p>
+      </div>
+    </div>
+    
+    <!-- Toiletries & Touch-Ups -->
+    <div class="section">
+      <div class="section-header">
+        <h2>✦ Toiletries & Touch-Ups</h2>
+      </div>
+      
+      <div class="subsection">
+        <h3>Hair Essentials</h3>
+        <ul class="checklist">
+          <li><div class="checkbox"></div>Brush or comb</li>
+          <li><div class="checkbox"></div>Bobby pins & hair ties</li>
+          <li><div class="checkbox"></div>Hairspray & shine spray</li>
+          <li><div class="checkbox"></div>Lint roller <span class="note">(optional)</span></li>
+        </ul>
+      </div>
+      
+      <div class="subsection">
+        <h3>Makeup Essentials</h3>
+        <ul class="checklist">
+          <li><div class="checkbox"></div>Lipstick <span class="note">(touch-ups, optional)</span></li>
+          <li><div class="checkbox"></div>Translucent powder & blotting paper</li>
+          <li><div class="checkbox"></div>Compact mirror</li>
+          <li><div class="checkbox"></div>Lash glue & tweezers <span class="note">(optional)</span></li>
+          <li><div class="checkbox"></div>Makeup wipes or baby wipes</li>
+        </ul>
+      </div>
+      
+      <div class="subsection">
+        <h3>Freshness on Show Day</h3>
+        <ul class="checklist">
+          <li><div class="checkbox"></div>Tan-safe deodorant <span class="note">(optional) – aluminium-free, clear, oil-free</span></li>
+          <li><div class="checkbox"></div>Dryer sheets <span class="note">(optional) – dab underarms for discreet freshness</span></li>
+          <li><div class="checkbox"></div>Perfume or body spray <span class="note">(optional, tan-safe) – apply lightly and away from tan or bikini</span></li>
+        </ul>
+      </div>
+      
+      <div class="subsection">
+        <h3>Miscellaneous</h3>
+        <ul class="checklist">
+          <li><div class="checkbox"></div>Nail file or nail glue <span class="note">(optional)</span></li>
+          <li><div class="checkbox"></div>Tanning glove or roller <span class="note">(for quick touch-ups)</span></li>
+          <li><div class="checkbox"></div>Small sewing kit <span class="note">(for emergency bikini fixes)</span></li>
+          <li><div class="checkbox"></div>Small handheld mirror <span class="note">(for low-light tan or makeup checks)</span></li>
+        </ul>
+      </div>
+      
+      <div class="pro-tip">
+        <p><strong>💜 Note:</strong> If you've purchased comp day hair, makeup, and tanning services, not everything here will be necessary — but it's always smart to have general touch-up items on hand just in case.</p>
+      </div>
+    </div>
+    
+    <!-- First Aid & Sanitary -->
+    <div class="section">
+      <div class="section-header">
+        <h2>✦ First Aid & Sanitary Essentials</h2>
+      </div>
+      
+      <div class="subsection">
+        <h3>Toileting & Hygiene</h3>
+        <ul class="checklist">
+          <li><div class="checkbox"></div>Portable pee cup or funnel</li>
+          <li><div class="checkbox"></div>Tampons, pads, or liners <span class="note">(just in case!)</span></li>
+          <li><div class="checkbox"></div>Cotton pads & tissues</li>
+        </ul>
+      </div>
+      
+      <div class="subsection">
+        <h3>Pain & Allergy Relief</h3>
+        <ul class="checklist">
+          <li><div class="checkbox"></div>Pain relief <span class="note">(e.g. Panadol, Nurofen)</span></li>
+          <li><div class="checkbox"></div>Antihistamines <span class="note">(in case of allergies or tan rash)</span></li>
+        </ul>
+      </div>
+      
+      <div class="subsection">
+        <h3>Minor Medical & Wardrobe Fixes</h3>
+        <ul class="checklist">
+          <li><div class="checkbox"></div>Bandaids & blister pads</li>
+          <li><div class="checkbox"></div>Tweezers, mini scissors & safety pins</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-logo">Personalised Posing</div>
+      <p>International Posing Coach</p>
+      <p><a href="https://www.personalisedposing.com.au">www.personalisedposing.com.au</a></p>
+      <p><a href="https://instagram.com/personalised_posing">@personalised_posing</a></p>
+      <p style="margin-top: 15px;">Made with <span class="heart">💜</span> for stage-ready athletes</p>
+    </div>
+    
+  </div>
+</body>
+</html>

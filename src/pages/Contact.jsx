@@ -90,6 +90,23 @@ const faqs = [
     question: 'What do I need for online coaching?',
     answer: 'A smartphone/laptop, full length mirror, and good lighting.',
   },
+  {
+    question: 'Do I need posing experience to start?',
+    answer: 'Not at all! I work with complete beginners through to seasoned pros.',
+  },
+  {
+    question: 'Can I book a single session?',
+    answer: 'Yes — Casual Coaching is perfect for one-off sessions or occasional tune-ups.',
+  },
+  {
+    question: "What's the best way to reach you?",
+    answer: 'This form or DM me on Instagram @personalised_posing.',
+  },
+  {
+    question: 'Do you work with interstate/international clients?',
+    answer: 'Absolutely — I coach athletes across Australia and worldwide via online sessions.',
+    link: { text: 'Read testimonials here', to: '/testimonials' },
+  },
 ]
 
 function Contact() {
@@ -208,7 +225,12 @@ function Contact() {
                 {faqs.map((faq, index) => (
                   <div key={index} className="glass-card-dark p-4">
                     <h4 className="font-medium text-sm mb-1 text-white">{faq.question}</h4>
-                    <p className="text-white/60 text-sm">{faq.answer}</p>
+                    <p className="text-white/60 text-sm">
+                      {faq.answer}
+                      {faq.link && (
+                        <> <Link to={faq.link.to} className="text-brand-purple hover:underline">{faq.link.text}</Link></>
+                      )}
+                    </p>
                   </div>
                 ))}
               </div>

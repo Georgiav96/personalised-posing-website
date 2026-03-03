@@ -249,27 +249,6 @@ function Testimonials() {
         </div>
       </section>
 
-      {/* Stats Banner - Dark */}
-      <section className="py-16 bg-[#0a0a0a]">
-        <div className="max-w-6xl mx-auto px-6">
-          <RevealOnScroll>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {[
-                { number: '150+', label: 'Athletes Coached' },
-                { number: '500+', label: 'Top 5 Placings' },
-                { number: '24', label: 'State Titles' },
-                { number: '14', label: 'Pro Wins' },
-              ].map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-4xl md:text-5xl font-heading text-brand-purple text-glow mb-2">{stat.number}</div>
-                  <div className="text-white/50 text-sm uppercase tracking-wider">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </RevealOnScroll>
-        </div>
-      </section>
-
       {/* CTA - Glowing purple gradient */}
       <section className="section-padding relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-purple" />

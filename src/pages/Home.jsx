@@ -6,6 +6,7 @@ import { ArrowRight, Star, ChevronDown, ChevronUp, Check, X, Users, Calendar, Tr
 // Marketing photos
 const heroImage = '/images/georgia-hero-composite.jpg'
 const aboutImage = '/images/georgia-about.jpg'
+const heroBackground = `${import.meta.env.BASE_URL}images/hero-background.jpg`
 const transformImage = `${import.meta.env.BASE_URL}images/driven-section.jpg`
 const commitmentImage = '/images/marketing-shoot/05102025_GeorgiaVoice_High-805.jpg'
 
@@ -282,9 +283,9 @@ function Home() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src={aboutImage}
+            src={heroBackground}
             alt="Georgia Voice - International Posing Coach"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
           {/* Dark gradient overlays */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/40" />

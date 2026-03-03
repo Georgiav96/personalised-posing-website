@@ -268,17 +268,11 @@ function About() {
             </RevealOnScroll>
             
             <RevealOnScroll direction="right" delay={0.2}>
-              <span className="badge-dark mb-4">
-                What I Do
-              </span>
               <h2 className="text-3xl md:text-4xl font-heading mb-6 text-white">
-                My Work <span className="text-brand-purple text-glow">Blends</span>
+                What I <span className="text-brand-purple text-glow">Do</span>
               </h2>
               <p className="text-white/70 leading-relaxed mb-6">
-                Technical posing, performance coaching, and deep personal awareness — so athletes don't just <em className="font-accent text-brand-purple">look</em> prepared, they <em className="font-accent text-brand-purple">feel</em> prepared.
-              </p>
-              <p className="text-white/70 leading-relaxed mb-6">
-                I work with women across multiple federations and divisions, from first-time competitors to seasoned athletes.
+                My work blends technical posing, performance coaching, and deep personal awareness — so athletes don't just <em className="font-accent text-brand-purple">look</em> prepared, they <em className="font-accent text-brand-purple">feel</em> prepared. I work with women across multiple federations and divisions, from first-time competitors to seasoned athletes.
               </p>
               
               <div className="glass-card-dark-purple p-6">

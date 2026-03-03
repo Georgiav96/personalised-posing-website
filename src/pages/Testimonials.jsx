@@ -77,9 +77,9 @@ const testimonials = [
   {
     quote: "She has become a sister, an icon, a mentor and a role model to me. Everything is so special and personalised to the individual and their needs. She helped me see my potential and always wants the best for her clients. Couldn't recommend a more beautiful soul and business.",
     name: 'Taylor Lawrence',
-    title: 'Bikini Pro',
-    federation: 'ICN',
-    category: 'Bikini',
+    title: 'Bikini & Swimsuit Pro (NBA)',
+    federation: 'NBA',
+    category: 'Bikini & Swimsuit',
     featured: true,
   },
   {

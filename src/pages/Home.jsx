@@ -233,7 +233,7 @@ const testimonials = [
   {
     quote: "She has become a sister, an icon, a mentor and a role model to me. Everything is so special and personalised. She helped me see my potential and always wants the best for her clients.",
     name: 'Taylor Lawrence',
-    title: 'Bikini Pro',
+    title: 'Bikini & Swimsuit Pro (NBA)',
     image: `${import.meta.env.BASE_URL}images/testimonial-taylor.jpg`,
   },
   {

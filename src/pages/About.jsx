@@ -175,12 +175,12 @@ const values = [
   {
     icon: Heart,
     title: 'Safe Space',
-    description: 'I create a safe, intentional space where you can build trust in yourself.',
+    description: 'I create a safe, intentional space where you can learn to trust yourself.',
   },
   {
     icon: Sparkles,
     title: 'Presence Over Perfection',
-    description: 'Posing isn\'t about perfection — it\'s about presence and authentic connection.',
+    description: 'Posing isn\'t about perfection — it\'s about presence and self-expression.',
   },
   {
     icon: Target,
@@ -190,7 +190,7 @@ const values = [
   {
     icon: Users,
     title: 'Team Effort',
-    description: 'I work closely with prep coaches because your success is a team effort.',
+    description: 'I work closely with prep coaches because your success takes a whole team.',
   },
 ]
 

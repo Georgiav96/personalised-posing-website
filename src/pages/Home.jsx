@@ -163,7 +163,7 @@ const services = [
     icon: Calendar,
     title: 'Workshops',
     description: 'Group sessions and intensive workshop experiences for competition prep.',
-    link: '/services#workshops',
+    link: '/workshops',
   },
   {
     icon: Heart,
@@ -372,12 +372,15 @@ function Home() {
         </div>
       </section>
 
-      {/* Federation Marquee - Dark */}
+      {/* Tagline Marquee - Dark */}
       <section className="py-8 bg-black/50 border-y border-white/5 overflow-hidden">
         <div className="animate-marquee whitespace-nowrap">
-          {[...federations, ...federations, ...federations, ...federations].map((fed, index) => (
-            <span key={index} className="text-white/30 font-heading text-2xl mx-8 hover:text-brand-purple transition-colors">
-              {fed}
+          {[...Array(8)].map((_, index) => (
+            <span key={index} className="inline-flex items-center">
+              <span className="text-white/60 font-heading text-2xl mx-8">
+                More Than Just a Posing Coach
+              </span>
+              <span className="text-brand-purple mx-4">✦</span>
             </span>
           ))}
         </div>

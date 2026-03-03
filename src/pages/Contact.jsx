@@ -120,6 +120,7 @@ function Contact() {
     message: '',
   })
   const [submitted, setSubmitted] = useState(false)
+  const [showAllFaqs, setShowAllFaqs] = useState(false)
 
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.name]: e.target.value })
@@ -222,7 +223,7 @@ function Contact() {
               {/* Quick FAQs */}
               <h3 className="font-semibold mb-4 text-white">Quick Answers</h3>
               <div className="space-y-4">
-                {faqs.map((faq, index) => (
+                {faqs.slice(0, showAllFaqs ? faqs.length : 3).map((faq, index) => (
                   <div key={index} className="glass-card-dark p-4">
                     <h4 className="font-medium text-sm mb-1 text-white">{faq.question}</h4>
                     <p className="text-white/60 text-sm">
@@ -233,6 +234,14 @@ function Contact() {
                     </p>
                   </div>
                 ))}
+                {faqs.length > 3 && (
+                  <button
+                    onClick={() => setShowAllFaqs(!showAllFaqs)}
+                    className="text-brand-purple text-sm font-medium hover:underline flex items-center gap-1"
+                  >
+                    {showAllFaqs ? 'Show less' : `Show ${faqs.length - 3} more`}
+                  </button>
+                )}
               </div>
             </RevealOnScroll>
 

@@ -285,7 +285,8 @@ function Home() {
           <img 
             src={heroBackground}
             alt="Georgia Voice - International Posing Coach"
-            className="w-full h-full object-cover object-right"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: '70% center' }}
           />
           {/* Dark gradient overlays */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/40" />

@@ -52,6 +52,9 @@ function Footer() {
               <Link to="/show-days" className="block text-white/60 hover:text-brand-purple transition-colors">
                 Show Days
               </Link>
+              <Link to="/events" className="block text-white/60 hover:text-brand-purple transition-colors">
+                Events
+              </Link>
               <Link to="/workshops" className="block text-white/60 hover:text-brand-purple transition-colors">
                 Workshops
               </Link>
@@ -94,6 +97,7 @@ function Footer() {
             <span className="text-sm font-semibold hover:text-brand-purple transition-colors">FMG</span>
             <span className="text-sm font-semibold hover:text-brand-purple transition-colors">OCB</span>
             <span className="text-sm font-semibold hover:text-brand-purple transition-colors">ANB</span>
+            <span className="text-sm font-semibold hover:text-brand-purple transition-colors">INBA</span>
             <span className="text-sm font-semibold hover:text-brand-purple transition-colors">WNBF</span>
           </div>
         </div>

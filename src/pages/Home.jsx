@@ -166,6 +166,7 @@ const services = [
     description: 'Group sessions and intensive workshop experiences for competition prep.',
     link: '/workshops',
     image: `${import.meta.env.BASE_URL}images/service-workshops.jpg`,
+    imagePosition: 'center',
   },
   {
     icon: Heart,
@@ -432,7 +433,7 @@ function Home() {
                       <img 
                         src={service.image} 
                         alt={service.title}
-                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                        className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${service.imagePosition === 'center' ? 'object-center' : 'object-top'}`}
                       />
                     </div>
                   )}

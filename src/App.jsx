@@ -20,7 +20,7 @@ function Layout({ children }) {
   
   // Pages without navbar/footer
   const noLayoutPages = ['/', '/links']
-  const hideLayout = noLayoutPages.includes(location.pathname)
+  const hideLayout = noLayoutPages.includes(location.pathname) || location.pathname === ''
   
   if (hideLayout) {
     return children
@@ -39,7 +39,7 @@ function Layout({ children }) {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/personalised-posing-website">
       <Layout>
         <Routes>
           <Route path="/" element={<Landing />} />

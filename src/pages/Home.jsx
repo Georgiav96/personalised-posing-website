@@ -533,7 +533,7 @@ function Home() {
               <StaggerItem key={index}>
                 <div className={testimonial.featured ? 'bento-card-dark-featured h-full flex flex-col' : 'testimonial-card-dark h-full flex flex-col'}>
                   {testimonial.image && (
-                    <div className="w-20 h-20 rounded-full overflow-hidden mb-4 border-2 border-brand-purple/30">
+                    <div className="w-28 h-28 rounded-full overflow-hidden mb-4 border-2 border-brand-purple/30 mx-auto">
                       <img 
                         src={testimonial.image} 
                         alt={testimonial.name}

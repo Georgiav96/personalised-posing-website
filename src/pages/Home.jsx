@@ -337,22 +337,6 @@ function Home() {
                 </Link>
               </motion.div>
               
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                className="flex items-center gap-4 text-white/60"
-              >
-                <span className="text-sm">Follow me</span>
-                <a href="https://instagram.com/personalised_posing" target="_blank" rel="noopener noreferrer" 
-                   className="hover:text-brand-purple transition-colors p-2 rounded-full hover:bg-white/10">
-                  <Instagram className="w-5 h-5" />
-                </a>
-                <a href="mailto:hello@personalisedposing.com" 
-                   className="hover:text-brand-purple transition-colors p-2 rounded-full hover:bg-white/10">
-                  <Mail className="w-5 h-5" />
-                </a>
-              </motion.div>
             </div>
           </div>
         </div>

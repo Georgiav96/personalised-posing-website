@@ -346,20 +346,11 @@ function About() {
             </RevealOnScroll>
             
             <RevealOnScroll direction="right" delay={0.2}>
-              <span className="badge-dark mb-4">
-                My Approach
-              </span>
               <h2 className="text-3xl md:text-4xl font-heading mb-6 text-white">
-                Strong <span className="text-brand-purple text-glow">Educational Role</span>
+                My <span className="text-brand-purple text-glow">Approach</span>
               </h2>
-              <p className="text-white/70 leading-relaxed mb-6">
-                I stay across federation criteria, category expectations, and posing standards — helping clients understand where they fit best and how to present their physique.
-              </p>
-              <p className="text-white/70 leading-relaxed mb-6">
-                I work closely with prep coaches because your success is a team effort.
-              </p>
               <p className="text-white/70 leading-relaxed">
-                Whether you're stepping on stage for the first time or you're a seasoned pro, my job is to help you feel prepared, confident, and proud.
+                I play a strong educational role staying across federation criteria, category expectations, and posing standards — helping clients understand where they fit best and how to present their physique. I work closely with prep coaches because your success is a team effort. Whether you're stepping on stage for the first time or you're a seasoned pro, my job is to help you feel prepared, confident, and proud.
               </p>
             </RevealOnScroll>
           </div>

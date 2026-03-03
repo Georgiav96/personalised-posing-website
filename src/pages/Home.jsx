@@ -241,7 +241,7 @@ const testimonials = [
 const faqs = [
   {
     question: 'How do online posing sessions work?',
-    answer: 'You\'ll submit videos of your posing practice, and I\'ll provide detailed analysis with corrections, tips, and drills. We also have live video sessions for real-time coaching and feedback.',
+    answer: 'Online sessions are conducted live via Google Meet. You\'ll need to download the Google Meet app on your phone or laptop, and make sure your camera and audio are set up in a well-lit space with enough room to practice walking and posing.',
   },
   {
     question: 'How far out from competition should I start?',

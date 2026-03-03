@@ -121,7 +121,7 @@ function Events() {
               <div className="glass-card-dark overflow-hidden group">
                 <div className="aspect-[3/4] overflow-hidden">
                   <img 
-                    src="/images/team-shoot-1year.jpg" 
+                    src={`${import.meta.env.BASE_URL}images/team-shoot-1year.jpg`} 
                     alt="Personalised Posing 1 Year Celebration Team Shoot 2024" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -137,7 +137,7 @@ function Events() {
               <div className="glass-card-dark overflow-hidden group">
                 <div className="aspect-[3/4] overflow-hidden">
                   <img 
-                    src="/images/team-shoot-christmas-1.jpg" 
+                    src={`${import.meta.env.BASE_URL}images/team-shoot-christmas-1.jpg`} 
                     alt="Personalised Posing Christmas Team Shoot" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />

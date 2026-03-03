@@ -158,21 +158,21 @@ const services = [
     description: 'Personalised posing guidance tailored to your physique, division, and federation.',
     link: '/services#coaching',
     featured: true,
-    image: '/images/service-coaching.jpg',
+    image: `${import.meta.env.BASE_URL}images/service-coaching.jpg`,
   },
   {
     icon: Calendar,
     title: 'Workshops',
     description: 'Group sessions and intensive workshop experiences for competition prep.',
     link: '/workshops',
-    image: '/images/service-workshops.jpg',
+    image: `${import.meta.env.BASE_URL}images/service-workshops.jpg`,
   },
   {
     icon: Heart,
     title: 'Community Events',
     description: 'Connect with like-minded women through social events and wellness activities.',
     link: '/events',
-    image: '/images/service-events.jpg',
+    image: `${import.meta.env.BASE_URL}images/service-events.jpg`,
   },
 ]
 

@@ -157,7 +157,7 @@ function Services() {
             
             {/* Ongoing Coaching - Featured */}
             <RevealOnScroll direction="left" delay={0.1}>
-              <div className="relative bento-card-dark-featured overflow-hidden h-full">
+              <div className="relative bento-card-dark-featured overflow-hidden h-full flex flex-col">
                 <div className="absolute top-4 right-4 bg-white/20 text-white text-xs px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1">
                   <Star className="w-3 h-3" />
                   Recommended
@@ -231,7 +231,7 @@ function Services() {
                   <p className="text-xs text-white/60 mt-3">Effective rate: $110/lesson (save $20/lesson vs Casual)</p>
                 </div>
 
-                <Link to="/signup?service=ongoing" className="btn-white w-full">
+                <Link to="/signup?service=ongoing" className="btn-white w-full mt-auto">
                   Start Ongoing Coaching
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -240,7 +240,7 @@ function Services() {
 
             {/* Casual Coaching - Dark */}
             <RevealOnScroll direction="right" delay={0.2}>
-              <div className="bento-card-dark overflow-hidden h-full">
+              <div className="bento-card-dark overflow-hidden h-full flex flex-col">
                 <div className="h-48 relative overflow-hidden rounded-2xl mb-6 -mx-8 -mt-8 px-8 pt-8">
                   <img 
                     src={casualImage}
@@ -313,7 +313,7 @@ function Services() {
                   </div>
                 </div>
 
-                <Link to="/signup?service=casual" className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300 inline-flex items-center justify-center w-full">
+                <Link to="/signup?service=casual" className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300 inline-flex items-center justify-center w-full mt-auto">
                   Book Casual Session
                 </Link>
               </div>

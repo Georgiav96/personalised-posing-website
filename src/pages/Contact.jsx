@@ -1,7 +1,7 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, useInView } from 'framer-motion'
-import { Mail, MapPin, Instagram, Facebook, Clock, Send, Check, Sparkles } from 'lucide-react'
+import { Mail, MapPin, Instagram, Facebook, Clock, Send, Check, Sparkles, ChevronDown } from 'lucide-react'
 
 const heroImage = '/images/contact-hero.jpg'
 
@@ -120,7 +120,11 @@ function Contact() {
     message: '',
   })
   const [submitted, setSubmitted] = useState(false)
-  const [showAllFaqs, setShowAllFaqs] = useState(false)
+  const [openFaqIndex, setOpenFaqIndex] = useState(null)
+  
+  const toggleFaq = useCallback((index) => {
+    setOpenFaqIndex(prev => prev === index ? null : index)
+  }, [])
 
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.name]: e.target.value })
@@ -220,28 +224,38 @@ function Contact() {
                 </a>
               </div>
 
-              {/* Quick FAQs */}
+              {/* Quick FAQs - Accordion */}
               <h3 className="font-semibold mb-4 text-white">Quick Answers</h3>
-              <div className="space-y-4">
-                {faqs.slice(0, showAllFaqs ? faqs.length : 3).map((faq, index) => (
-                  <div key={index} className="glass-card-dark p-4">
-                    <h4 className="font-medium text-sm mb-1 text-white">{faq.question}</h4>
-                    <p className="text-white/60 text-sm">
-                      {faq.answer}
-                      {faq.link && (
-                        <> <Link to={faq.link.to} className="text-brand-purple hover:underline">{faq.link.text}</Link></>
-                      )}
-                    </p>
+              <div className="space-y-2">
+                {faqs.map((faq, index) => (
+                  <div key={index} className="glass-card-dark overflow-hidden">
+                    <button
+                      onClick={() => toggleFaq(index)}
+                      className="w-full p-4 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
+                    >
+                      <h4 className="font-medium text-sm text-white pr-4">{faq.question}</h4>
+                      <ChevronDown 
+                        className={`w-4 h-4 text-brand-purple flex-shrink-0 transition-transform duration-300 ${openFaqIndex === index ? 'rotate-180' : ''}`} 
+                      />
+                    </button>
+                    <motion.div
+                      initial={false}
+                      animate={{ 
+                        height: openFaqIndex === index ? 'auto' : 0,
+                        opacity: openFaqIndex === index ? 1 : 0
+                      }}
+                      transition={{ duration: 0.3, ease: 'easeInOut' }}
+                      className="overflow-hidden"
+                    >
+                      <p className="px-4 pb-4 text-white/60 text-sm">
+                        {faq.answer}
+                        {faq.link && (
+                          <> <Link to={faq.link.to} className="text-brand-purple hover:underline">{faq.link.text}</Link></>
+                        )}
+                      </p>
+                    </motion.div>
                   </div>
                 ))}
-                {faqs.length > 3 && (
-                  <button
-                    onClick={() => setShowAllFaqs(!showAllFaqs)}
-                    className="text-brand-purple text-sm font-medium hover:underline flex items-center gap-1"
-                  >
-                    {showAllFaqs ? 'Show less' : `Show ${faqs.length - 3} more`}
-                  </button>
-                )}
               </div>
             </RevealOnScroll>
 

@@ -285,6 +285,26 @@ function About() {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section className="py-16 bg-[#0a0a0a] relative overflow-hidden">
+        <div className="max-w-4xl mx-auto px-6">
+          <RevealOnScroll>
+            <div className="relative rounded-2xl overflow-hidden" style={{ boxShadow: '0 0 60px rgba(149, 0, 255, 0.15)' }}>
+              <video 
+                autoPlay 
+                muted 
+                loop 
+                playsInline
+                className="w-full rounded-2xl"
+                style={{ border: '1px solid rgba(149, 0, 255, 0.2)' }}
+              >
+                <source src={`${import.meta.env.BASE_URL}videos/about-video.mp4`} type="video/mp4" />
+              </video>
+            </div>
+          </RevealOnScroll>
+        </div>
+      </section>
+
       {/* Performing Arts Background - Dark */}
       <section className="section-padding bg-[#0f0f0f] relative overflow-hidden">
         <div className="max-w-6xl mx-auto">

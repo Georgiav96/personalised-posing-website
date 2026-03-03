@@ -200,6 +200,33 @@ function Contact() {
         </div>
       </section>
 
+      {/* Book a Discovery Call - Dark */}
+      <section className="py-16 bg-[#0a0a0a] relative overflow-hidden">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+          <RevealOnScroll>
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-heading text-white mb-4">
+                Book a <span className="text-brand-purple text-glow">Discovery Call</span>
+              </h2>
+              <p className="text-white/70 max-w-xl mx-auto">
+                Ready to chat? Book a free 15-minute discovery call to discuss your goals and see how we can work together.
+              </p>
+            </div>
+            <div className="glass-card-dark p-4 md:p-6 rounded-2xl">
+              <iframe 
+                src="https://app.acuityscheduling.com/schedule.php?owner=30497349&appointmentType=89946196&ref=embedded_csp" 
+                title="Schedule Appointment" 
+                width="100%" 
+                height="700" 
+                frameBorder="0"
+                className="rounded-xl"
+                style={{ minHeight: '700px' }}
+              />
+            </div>
+          </RevealOnScroll>
+        </div>
+      </section>
+
       {/* Contact Content - Dark */}
       <section className="section-padding bg-[#0f0f0f] relative overflow-hidden">
         <FloatingParticles dark />

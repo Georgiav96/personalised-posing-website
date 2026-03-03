@@ -6,39 +6,38 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #ffffff; line-height: 1.6; padding: 40px 50px; max-width: 850px; margin: 0 auto; }
+    body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #ffffff; line-height: 1.5; padding: 30px 40px; max-width: 850px; margin: 0 auto; }
     
-    h1 { font-family: 'Playfair Display', serif; font-size: 36px; text-align: center; margin-bottom: 5px; }
+    h1 { font-family: 'Playfair Display', serif; font-size: 32px; text-align: center; margin-bottom: 4px; }
     h1 span { color: #9500ff; }
     
-    .logo { text-align: center; margin-bottom: 15px; color: #9500ff; font-family: 'Playfair Display', serif; font-size: 14px; letter-spacing: 2px; }
-    .subtitle { text-align: center; color: rgba(255,255,255,0.6); font-size: 14px; margin-bottom: 25px; }
+    .logo { text-align: center; margin-bottom: 10px; color: #9500ff; font-family: 'Playfair Display', serif; font-size: 12px; letter-spacing: 2px; }
+    .subtitle { text-align: center; color: rgba(255,255,255,0.6); font-size: 12px; margin-bottom: 15px; }
     
-    .section { page-break-inside: avoid; break-inside: avoid; margin-bottom: 22px; }
-    .section-header { background: linear-gradient(90deg, #9500ff, #bf5fff); color: white; padding: 10px 16px; border-radius: 8px; font-weight: 600; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; text-align: center; margin-bottom: 16px; }
+    .section { margin-bottom: 14px; }
+    .section-header { background: linear-gradient(90deg, #9500ff, #bf5fff); color: white; padding: 8px 14px; border-radius: 6px; font-weight: 600; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; text-align: center; margin-bottom: 10px; }
     
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
     
-    .category { background: rgba(255,255,255,0.02); border: 1px solid rgba(149,0,255,0.2); border-radius: 12px; padding: 16px 18px; }
-    .category h3 { font-family: 'Playfair Display', serif; font-size: 15px; color: #ffffff; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid rgba(149,0,255,0.25); }
+    .category { background: rgba(255,255,255,0.02); border: 1px solid rgba(149,0,255,0.2); border-radius: 10px; padding: 10px 12px; }
+    .category h3 { font-family: 'Playfair Display', serif; font-size: 13px; color: #ffffff; margin-bottom: 8px; padding-bottom: 5px; border-bottom: 1px solid rgba(149,0,255,0.25); }
     
     .checklist { list-style: none; }
-    .checklist li { display: flex; align-items: flex-start; gap: 10px; padding: 7px 0; color: rgba(255,255,255,0.9); font-size: 13px; }
-    .checkbox { width: 16px; height: 16px; min-width: 16px; border: 2px solid #9500ff; border-radius: 4px; margin-top: 1px; }
-    .checklist li em { color: rgba(255,255,255,0.45); font-style: italic; font-size: 11px; }
+    .checklist li { display: flex; align-items: flex-start; gap: 8px; padding: 4px 0; color: rgba(255,255,255,0.9); font-size: 11px; }
+    .checkbox { width: 12px; height: 12px; min-width: 12px; border: 2px solid #9500ff; border-radius: 3px; margin-top: 1px; }
+    .checklist li em { color: rgba(255,255,255,0.4); font-style: italic; font-size: 9px; }
     
-    .pro-tip { background: rgba(149,0,255,0.1); border-left: 4px solid #9500ff; padding: 14px 16px; margin-top: 16px; border-radius: 0 8px 8px 0; font-size: 12px; color: rgba(255,255,255,0.85); }
+    .pro-tip { background: rgba(149,0,255,0.1); border-left: 3px solid #9500ff; padding: 8px 10px; margin-top: 10px; border-radius: 0 6px 6px 0; font-size: 10px; color: rgba(255,255,255,0.85); }
     .pro-tip strong { color: #bf5fff; }
     
-    .hero-img { width: 100%; height: 150px; object-fit: cover; border-radius: 12px; margin-bottom: 25px; }
+    .hero-img { width: 100%; height: 100px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
     
-    .footer { text-align: center; margin-top: 30px; padding-top: 18px; border-top: 1px solid rgba(149,0,255,0.2); font-size: 12px; color: rgba(255,255,255,0.5); }
+    .footer { text-align: center; margin-top: 20px; padding-top: 12px; border-top: 1px solid rgba(149,0,255,0.2); font-size: 10px; color: rgba(255,255,255,0.5); }
     .footer a { color: #9500ff; text-decoration: none; }
     
     @media print { 
-      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; padding: 25px 35px; } 
-      .section { page-break-inside: avoid !important; break-inside: avoid !important; }
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; padding: 20px 30px; } 
     }
   </style>
 </head>
@@ -47,7 +46,7 @@
   <h1>Your Ultimate Show Day <span>Packing Checklist</span></h1>
   <p class="subtitle">Everything you need for a stress-free comp day</p>
   
-  <img src="/Users/ava/clawd/personalised-posing-website/public/images/marketing-shoot/05102025_GeorgiaVoice_High-347.jpg" class="hero-img" alt="">
+  <img src="/Users/ava/clawd/personalised-posing-website/public/images/checklist-hero.jpg" class="hero-img" alt="">
   
   <div class="section">
     <div class="section-header">» Stage Essentials «</div>
@@ -132,7 +131,7 @@
   
   <div class="section">
     <div class="section-header">» Toiletries & Touch-Ups «</div>
-    <div class="grid-2" style="margin-bottom: 14px;">
+    <div class="grid-2" style="margin-bottom: 8px;">
       <div class="category">
         <h3>Hair</h3>
         <ul class="checklist">

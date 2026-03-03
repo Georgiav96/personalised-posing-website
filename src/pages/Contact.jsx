@@ -120,6 +120,7 @@ function Contact() {
     message: '',
   })
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
   const [openFaqIndex, setOpenFaqIndex] = useState(null)
   
   const toggleFaq = useCallback((index) => {
@@ -130,10 +131,35 @@ function Contact() {
     setFormState({ ...formState, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(formState)
-    setSubmitted(true)
+    setSubmitting(true)
+    
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'b065cbbe-bff2-4ef3-a6ed-fce8873a5e87',
+          subject: `New enquiry from ${formState.name}`,
+          from_name: 'Personalised Posing Website',
+          ...formState,
+        }),
+      })
+      
+      const data = await response.json()
+      if (data.success) {
+        setSubmitted(true)
+      } else {
+        alert('Something went wrong. Please try again or DM me on Instagram.')
+      }
+    } catch (error) {
+      alert('Something went wrong. Please try again or DM me on Instagram.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -387,9 +413,9 @@ function Contact() {
                         />
                       </div>
 
-                      <button type="submit" className="btn-glow w-full">
-                        Send Message
-                        <Send className="ml-2 w-5 h-5" />
+                      <button type="submit" className="btn-glow w-full" disabled={submitting}>
+                        {submitting ? 'Sending...' : 'Send Message'}
+                        {!submitting && <Send className="ml-2 w-5 h-5" />}
                       </button>
                     </form>
                   </>

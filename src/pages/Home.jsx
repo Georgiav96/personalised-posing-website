@@ -249,7 +249,7 @@ const faqs = [
   },
   {
     question: 'Which federations do you coach?',
-    answer: 'I work across all major federations including ICN, NBA, IFBB/NPC, FMG, OCB, ANB, and WNBF. I coach Bikini, Wellness, Figure, Sports Model, Fitness, and Physique.',
+    answer: 'I work across all major federations including ICN, NBA, IFBB/NPC, FMG, OCB, ANB, INBA, and WNBF. I coach for Swimsuit, Bikini, Wellness, Sports Model, Fitness, and Figure (muscularity & symmetry poses).',
   },
   {
     question: 'What if I\'m a complete beginner?',

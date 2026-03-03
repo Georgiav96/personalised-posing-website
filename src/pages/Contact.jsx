@@ -321,6 +321,7 @@ function Contact() {
                             <option value="Bikini" className="bg-[#1a1a1a]">Bikini</option>
                             <option value="Wellness" className="bg-[#1a1a1a]">Wellness</option>
                             <option value="Figure" className="bg-[#1a1a1a]">Figure</option>
+                            <option value="Swimsuit" className="bg-[#1a1a1a]">Swimsuit</option>
                             <option value="Sports Model" className="bg-[#1a1a1a]">Sports Model</option>
                             <option value="Fitness" className="bg-[#1a1a1a]">Fitness</option>
                             <option value="unsure" className="bg-[#1a1a1a]">Not Sure Yet</option>

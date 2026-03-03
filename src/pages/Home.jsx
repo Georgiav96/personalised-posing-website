@@ -357,8 +357,8 @@ function Home() {
           </div>
         </div>
         
-        {/* Stats Row - overlapping dark cards */}
-        <div className="relative z-10 max-w-6xl mx-auto px-6 pb-16 -mt-20">
+        {/* Stats Row */}
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pb-16 mt-8">
           <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-4" staggerDelay={0.1}>
             {stats.map((stat, index) => (
               <StaggerItem key={index}>

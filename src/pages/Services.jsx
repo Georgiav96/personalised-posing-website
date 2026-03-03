@@ -174,21 +174,19 @@ function Services() {
                 </div>
                 
                 <p className="text-white/80 mb-6 leading-relaxed">
-                  A structured 12-lesson posing program with full support throughout your competition prep. The complete experience for serious competitors.
+                  A structured 12-lesson posing plan with full support throughout your competition prep. Multiple payment options available.
                 </p>
                 
                 <div className="mb-6">
                   <h4 className="font-semibold text-white mb-3">What's Included:</h4>
                   <ul className="space-y-2">
                     {[
-                      '12 x 45-minute personalised posing lessons',
-                      'Exclusive Client Portal access',
-                      'Posing check-in submissions between lessons',
+                      '12 x 45-minute personalised lessons',
+                      '6 x online posing check-in submissions',
+                      'Client Portal & Resource Centre access',
                       'Direct coach support via Telegram',
-                      'Client Resource Centre (mobility, breathwork, guides)',
-                      'Community support & connection',
-                      'VIP discounts on workshops & extras',
-                      'Competition day support (location dependent)',
+                      'Discount on Koko Australia Stagewear',
+                      'Discount on Life Portraits Photography packages',
                     ].map((feature, index) => (
                       <li key={index} className="flex items-start gap-2 text-sm text-white/80">
                         <Check className="w-4 h-4 text-white mt-0.5 flex-shrink-0" />
@@ -196,6 +194,9 @@ function Services() {
                       </li>
                     ))}
                   </ul>
+                  <p className="mt-3 text-sm text-brand-purple flex items-center gap-2">
+                    <span>💜</span> Pay upfront and receive a FREE Personalised Posing Bikini!
+                  </p>
                 </div>
 
                 <div className="mb-6">

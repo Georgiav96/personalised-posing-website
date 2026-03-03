@@ -207,6 +207,7 @@ function About() {
             loop 
             playsInline
             className="w-full h-full object-cover"
+            style={{ objectPosition: 'center 40%' }}
           >
             <source src={`${import.meta.env.BASE_URL}videos/about-video.mp4`} type="video/mp4" />
           </video>

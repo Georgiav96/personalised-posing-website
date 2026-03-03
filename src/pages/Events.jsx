@@ -69,8 +69,22 @@ function GlowingIcon({ icon: Icon, className = '' }) {
 function Events() {
   return (
     <div className="overflow-hidden bg-[#0a0a0a]">
-      {/* Hero - Dark */}
-      <section className="relative pt-32 pb-16 overflow-hidden">
+      {/* Hero - Dark with video background */}
+      <section className="relative pt-32 pb-16 overflow-hidden min-h-[50vh]">
+        {/* Background Video */}
+        <div className="absolute inset-0">
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+            className="w-full h-full object-cover"
+            style={{ objectPosition: 'center center' }}
+          >
+            <source src={`${import.meta.env.BASE_URL}videos/events-video.mp4`} type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-black/60" />
+        </div>
         <FloatingParticles />
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <motion.span

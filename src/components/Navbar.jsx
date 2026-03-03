@@ -30,7 +30,7 @@ function Navbar() {
       {/* Top Banner */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-brand-purple text-white text-center py-2 text-sm font-medium">
         <Link to="/quiz" className="hover:underline">
-          NOT SURE WHERE TO START? TAKE THE QUIZ →
+          NOT SURE WHERE TO START? TAKE OUR QUIZ! →
         </Link>
       </div>
       

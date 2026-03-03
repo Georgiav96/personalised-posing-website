@@ -182,7 +182,7 @@ const valueProps = [
   {
     icon: Sparkles,
     title: 'Action-Focused Coaching',
-    description: 'Real drills and practice, not just inspiration. Leave every session with clarity.',
+    description: 'Empowering context, practical tips, and personalised cues — so you leave each lesson knowing exactly what to work on.',
   },
   {
     icon: Heart,

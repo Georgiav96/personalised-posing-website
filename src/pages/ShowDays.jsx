@@ -169,7 +169,7 @@ function ShowDays() {
               The Numbers
             </span>
             <h2 className="text-3xl md:text-4xl font-heading text-white">
-              Career <span className="text-brand-purple text-glow">Highlights</span>
+              Show Day <span className="text-brand-purple text-glow">Highlights</span>
             </h2>
           </RevealOnScroll>
           

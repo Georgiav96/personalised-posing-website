@@ -11,6 +11,7 @@ import Contact from './pages/Contact'
 import ClientPortal from './pages/ClientPortal'
 import SignUp from './pages/SignUp'
 import Quiz from './pages/Quiz'
+import ReadinessQuiz from './pages/ReadinessQuiz'
 import Events from './pages/Events'
 import Workshops from './pages/Workshops'
 import Links from './pages/Links'
@@ -54,6 +55,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/quiz" element={<Quiz />} />
+          <Route path="/start" element={<ReadinessQuiz />} />
           <Route path="/events" element={<Events />} />
           <Route path="/workshops" element={<Workshops />} />
           <Route path="/links" element={<Links />} />

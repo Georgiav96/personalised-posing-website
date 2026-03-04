@@ -594,7 +594,7 @@ function Home() {
                 Why Work With Me
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading text-white mb-6">
-                Guidance That's <span className="text-brand-purple text-glow">Grounded & Results-Driven</span>
+                Guidance That's <span className="text-brand-purple text-glow">Grounded &<br />Results-Driven</span>
               </h2>
               <p className="text-white/70 text-lg mb-8 leading-relaxed">
                 Working with a coach isn't about finding someone who tells you what to do — 
@@ -628,14 +628,17 @@ function Home() {
             
             <RevealOnScroll direction="right" delay={0.2}>
               <div className="relative">
-                <div className="float-image-reverse">
+                <div className="float-image-reverse overflow-hidden rounded-3xl">
                   <img 
                     src={transformImage}
                     alt="Georgia coaching"
-                    className="rounded-3xl w-full"
+                    className="w-full"
                     style={{ 
                       boxShadow: '0 0 60px rgba(149, 0, 255, 0.2), 0 20px 50px rgba(0,0,0,0.5)',
-                      border: '1px solid rgba(149, 0, 255, 0.2)'
+                      border: '1px solid rgba(149, 0, 255, 0.2)',
+                      transform: 'scale(1.15)',
+                      objectFit: 'cover',
+                      objectPosition: 'center'
                     }}
                   />
                 </div>

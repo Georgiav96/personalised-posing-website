@@ -327,15 +327,15 @@ function Services() {
             <div className="glass-card-dark p-8">
               <h3 className="text-xl font-heading text-white mb-6 text-center">Quick Comparison</h3>
               <div className="overflow-x-auto">
-                <table className="w-full">
+                <table className="w-full max-w-2xl mx-auto">
                   <thead>
                     <tr className="border-b border-white/10">
-                      <th className="text-left py-3 pr-4 text-white/60 font-normal"></th>
-                      <th className="text-center py-3 px-4 font-heading text-white/80">Casual</th>
-                      <th className="text-center py-3 px-4 font-heading text-brand-purple bg-brand-purple/10 rounded-t-lg">Ongoing ⭐</th>
+                      <th className="text-right py-3 pr-6 text-white/60 font-normal w-1/3"></th>
+                      <th className="text-center py-3 px-6 font-heading text-lg text-white/80 w-1/3">Casual</th>
+                      <th className="text-center py-3 px-6 font-heading text-lg text-brand-purple bg-brand-purple/10 rounded-t-lg w-1/3">Ongoing ⭐</th>
                     </tr>
                   </thead>
-                  <tbody className="text-sm">
+                  <tbody className="text-base">
                     {[
                       { feature: 'Sessions', casual: '1', ongoing: '12' },
                       { feature: 'Per-lesson cost', casual: '$130', ongoing: '$110' },
@@ -348,15 +348,15 @@ function Services() {
                       { feature: 'Comp day support', casual: false, ongoing: true },
                     ].map((row, index) => (
                       <tr key={index} className="border-b border-white/5">
-                        <td className="py-3 pr-4 text-white/60">{row.feature}</td>
-                        <td className="text-center py-3 px-4">
+                        <td className="py-4 pr-6 text-white/70 text-right">{row.feature}</td>
+                        <td className="text-center py-4 px-6">
                           {typeof row.casual === 'boolean' ? (
                             row.casual ? <Check className="w-5 h-5 text-green-400 mx-auto" /> : <X className="w-5 h-5 text-white/20 mx-auto" />
                           ) : (
                             <span className="text-white/80">{row.casual}</span>
                           )}
                         </td>
-                        <td className="text-center py-3 px-4 bg-brand-purple/10">
+                        <td className="text-center py-4 px-6 bg-brand-purple/10">
                           {typeof row.ongoing === 'boolean' ? (
                             row.ongoing ? <Check className="w-5 h-5 text-brand-purple mx-auto" /> : <X className="w-5 h-5 text-white/20 mx-auto" />
                           ) : (

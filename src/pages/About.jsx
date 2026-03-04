@@ -205,7 +205,7 @@ function About() {
             src={`${import.meta.env.BASE_URL}images/about-hero-bg.jpg`}
             alt="Stage background"
             className="w-full h-full object-cover"
-            style={{ objectPosition: '70% center' }}
+            style={{ objectPosition: 'right 20%' }}
           />
           {/* Dark gradient overlays */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />

@@ -183,7 +183,9 @@ function Contact() {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed"
             >
-              Have questions or ready to start your posing journey? Send me a message below or book a free discovery call.
+              Have questions or ready to start your posing journey?
+              <br />
+              <span className="mt-1 inline-block">Send me a message below or book a free discovery call.</span>
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 30 }}

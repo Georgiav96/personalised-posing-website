@@ -433,7 +433,7 @@ function About() {
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Let's create your stage presence together. Book a discovery call and tell me about your competition goals.
             </p>
-            <Link to="/contact" className="btn-white group">
+            <Link to="/discovery-call" className="btn-white group">
               Book Your Discovery Call
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>

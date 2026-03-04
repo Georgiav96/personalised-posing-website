@@ -107,7 +107,7 @@ const ReadinessQuiz = () => {
           { name: 'Show Day Prep', desc: 'Peak week guidance and backstage support', icon: '👑' }
         ],
         cta: 'Book a Discovery Call',
-        ctaLink: '/contact'
+        ctaLink: '/discovery-call'
       }
     }
     // New to posing, needs foundation
@@ -120,7 +120,7 @@ const ReadinessQuiz = () => {
           { name: 'Workshops', desc: 'Great for building confidence in a supportive group', icon: '👯' }
         ],
         cta: 'Book a Discovery Call',
-        ctaLink: '/contact'
+        ctaLink: '/discovery-call'
       }
     }
     // Wants group learning
@@ -146,7 +146,7 @@ const ReadinessQuiz = () => {
           { name: 'Competition Strategy', desc: 'Federation-specific coaching', icon: '🎯' }
         ],
         cta: 'Book a Discovery Call',
-        ctaLink: '/contact'
+        ctaLink: '/discovery-call'
       }
     }
     // Default recommendation
@@ -160,7 +160,7 @@ const ReadinessQuiz = () => {
           { name: 'Online Options', desc: 'Flexible remote coaching', icon: '💻' }
         ],
         cta: 'Book a Discovery Call',
-        ctaLink: '/contact'
+        ctaLink: '/discovery-call'
       }
     }
 

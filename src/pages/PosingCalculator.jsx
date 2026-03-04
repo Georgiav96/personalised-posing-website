@@ -403,7 +403,7 @@ const PosingCalculator = () => {
               <h3 className="text-xl font-heading text-white mb-2">Ready to get started?</h3>
               <p className="text-white/70 mb-4">Let's create a posing plan that fits your timeline and goals.</p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link to="/contact" className="btn-primary text-center">
+                <Link to="/discovery-call" className="btn-primary text-center">
                   Book a Discovery Call
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>

@@ -16,6 +16,7 @@ import PosingCalculator from './pages/PosingCalculator'
 import Events from './pages/Events'
 import Workshops from './pages/Workshops'
 import Links from './pages/Links'
+import DiscoveryCall from './pages/DiscoveryCall'
 
 function Layout({ children }) {
   const location = useLocation()
@@ -61,6 +62,7 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/workshops" element={<Workshops />} />
           <Route path="/links" element={<Links />} />
+          <Route path="/discovery-call" element={<DiscoveryCall />} />
         </Routes>
       </Layout>
     </Router>

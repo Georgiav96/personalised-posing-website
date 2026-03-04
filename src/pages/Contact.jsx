@@ -164,18 +164,18 @@ function Contact() {
 
   return (
     <div className="overflow-hidden bg-[#0a0a0a]">
-      {/* Book a Discovery Call - Hero */}
-      <section className="relative pt-32 pb-16 bg-[#0a0a0a] overflow-hidden">
+      {/* Contact Hero */}
+      <section className="relative pt-32 pb-8 bg-[#0a0a0a] overflow-hidden">
         <FloatingParticles dark />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="text-center mb-10">
+          <div className="text-center">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-5xl lg:text-6xl font-heading text-white mb-6"
             >
-              Book a <span className="text-brand-purple text-glow">Discovery Call</span>
+              Get In <span className="text-brand-purple text-glow">Touch</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
@@ -183,25 +183,19 @@ function Contact() {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed"
             >
-              A free 15-minute call to chat about your competition goals, ask questions, and see if we're the right fit. No pressure, no commitment — just a chance to connect and get clarity on your posing journey. Please complete the short information form as part of your booking — it helps me prepare so we can make the most of our time together.
+              Have questions or ready to start your posing journey? Send me a message below or book a free discovery call.
             </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mt-8"
+            >
+              <Link to="/discovery-call" className="btn-glow">
+                Book a Free Discovery Call
+              </Link>
+            </motion.div>
           </div>
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="glass-card-dark p-4 md:p-6 rounded-2xl"
-          >
-            <iframe 
-              src="https://app.acuityscheduling.com/schedule.php?owner=30497349&appointmentType=89946196&ref=embedded_csp" 
-              title="Schedule Appointment" 
-              width="100%" 
-              height="1100" 
-              frameBorder="0"
-              className="rounded-xl"
-              style={{ minHeight: '1100px' }}
-            />
-          </motion.div>
         </div>
       </section>
 

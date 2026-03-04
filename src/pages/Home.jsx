@@ -878,7 +878,7 @@ function Home() {
               Your transformation begins with a single step. Let's create your winning presence together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="btn-white group">
+              <Link to="/discovery-call" className="btn-white group">
                 Book Your Discovery Call
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>

@@ -310,9 +310,9 @@ function Home() {
   return (
     <div className="overflow-x-hidden bg-[#0a0a0a]">
       {/* Hero Section - Dark */}
-      <section ref={heroRef} className="relative min-h-screen overflow-hidden">
+      <section ref={heroRef} className="relative min-h-screen overflow-hidden bg-black">
         {/* Background Image */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-black">
           <img 
             src={`${import.meta.env.BASE_URL}images/hero-athlete.jpg`}
             alt="Stage athlete"

@@ -162,7 +162,7 @@ function Testimonials() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl font-heading text-white mb-4"
           >
-            Real Results. <span className="text-brand-purple text-glow">Real Transformations.</span>
+            Real People. <span className="text-brand-purple text-glow">Real Results.</span>
           </motion.h1>
           
           <motion.p

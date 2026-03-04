@@ -187,7 +187,7 @@ const services = [
   {
     icon: Users,
     title: '1:1 Coaching',
-    description: 'Personalised posing guidance tailored to your physique, division, and federation.',
+    description: 'Personalised posing guidance tailored to your physique, category, and federation.',
     link: '/services#coaching',
     featured: true,
     image: `${import.meta.env.BASE_URL}images/service-coaching.jpg`,

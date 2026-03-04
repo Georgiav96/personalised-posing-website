@@ -88,25 +88,19 @@ function Workshops() {
         </div>
       </section>
 
-      {/* Workshop Video - Dark */}
-      <section className="section-padding bg-[#0a0a0a] relative overflow-hidden">
-        <FloatingParticles />
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <RevealOnScroll>
-            <div className="aspect-video rounded-3xl overflow-hidden" style={{ 
-              boxShadow: '0 0 60px rgba(149, 0, 255, 0.2), 0 20px 50px rgba(0,0,0,0.5)',
-              border: '1px solid rgba(149, 0, 255, 0.2)'
-            }}>
-              <iframe
-                src="https://drive.google.com/file/d/1w2-haLBPXeIMghcf-6HnASygJkg5t3ri/preview"
-                className="w-full h-full"
-                frameBorder="0"
-                allow="autoplay; fullscreen"
-                allowFullScreen
-                title="Workshop Video"
-              />
-            </div>
-          </RevealOnScroll>
+      {/* Workshop Video - Full Width Dark */}
+      <section className="bg-[#0a0a0a] relative overflow-hidden">
+        <div className="relative z-10 w-full">
+          <div className="aspect-video w-full overflow-hidden">
+            <iframe
+              src="https://drive.google.com/file/d/1w2-haLBPXeIMghcf-6HnASygJkg5t3ri/preview?autoplay=1"
+              className="w-full h-full"
+              frameBorder="0"
+              allow="autoplay; fullscreen"
+              allowFullScreen
+              title="Workshop Video"
+            />
+          </div>
         </div>
       </section>
 

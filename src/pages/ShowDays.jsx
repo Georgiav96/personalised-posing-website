@@ -111,19 +111,24 @@ const achievements = [
 function ShowDays() {
   return (
     <div className="overflow-hidden bg-[#0a0a0a]">
-      {/* Hero - Dark with background image */}
+      {/* Hero - Dark with parallax background image */}
       <section className="relative min-h-[70vh] overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img 
-            src={heroImage}
-            alt="Results"
-            className="w-full h-full object-cover object-center"
-          />
-          {/* Dark gradient overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/50" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
-        </div>
+        {/* Parallax Background Image */}
+        <motion.div 
+          className="absolute inset-0"
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5, ease: 'easeOut' }}
+          style={{ 
+            backgroundImage: `url(${heroImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center right',
+            backgroundAttachment: 'fixed'
+          }}
+        />
+        {/* Dark gradient overlays */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
         
         <FloatingParticles />
         

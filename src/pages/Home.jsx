@@ -694,11 +694,12 @@ function Home() {
           </RevealOnScroll>
           
           <RevealOnScroll delay={0.2}>
-            <div className="glass-card-dark-purple p-8 md:p-12 text-center mb-12">
-              <h3 className="text-2xl font-heading text-white mb-4">
+            <div className="glass-card-dark-purple p-8 md:p-12 text-center">
+              {/* Part 1: The question */}
+              <h3 className="text-2xl font-heading text-white mb-6">
                 If You've Ever Said To Yourself...
               </h3>
-              <div className="flex flex-wrap justify-center gap-3">
+              <div className="flex flex-wrap justify-center gap-3 mb-10">
                 {painPoints.map((point, index) => (
                   <motion.span 
                     key={index}
@@ -712,15 +713,15 @@ function Home() {
                   </motion.span>
                 ))}
               </div>
-            </div>
-          </RevealOnScroll>
-          
-          <RevealOnScroll delay={0.3}>
-            <div className="glass-card-dark p-8 md:p-12 text-center">
+              
+              {/* Divider */}
+              <div className="w-24 h-px bg-gradient-to-r from-transparent via-brand-purple/50 to-transparent mx-auto mb-10" />
+              
+              {/* Part 2: The answer */}
               <h3 className="text-2xl md:text-3xl font-heading text-brand-purple mb-4">
                 Then You Are Exactly Who I Am Here To Help
               </h3>
-              <p className="text-white/80 text-lg">
+              <p className="text-white/80 text-lg max-w-2xl mx-auto">
                 You're not behind. You're not bad at posing. You just haven't been shown 
                 how to move with confidence in your own body yet.
               </p>

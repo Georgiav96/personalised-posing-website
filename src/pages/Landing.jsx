@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Sparkles } from 'lucide-react'
@@ -38,18 +39,39 @@ function FloatingParticles() {
 }
 
 function Landing() {
+  const videoRef = useRef(null)
+  const [isPlaying, setIsPlaying] = useState(false)
+  
+  useEffect(() => {
+    // 4 second delay before autoplay with audio
+    const timer = setTimeout(() => {
+      if (videoRef.current) {
+        videoRef.current.play().then(() => {
+          setIsPlaying(true)
+        }).catch(() => {
+          // Autoplay with audio may be blocked, try muted as fallback
+          if (videoRef.current) {
+            videoRef.current.muted = true
+            videoRef.current.play()
+          }
+        })
+      }
+    }, 4000)
+    
+    return () => clearTimeout(timer)
+  }, [])
+  
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0">
         <video 
-          autoPlay
-          muted
+          ref={videoRef}
           loop
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src={`${import.meta.env.BASE_URL}videos/action-video-web.mp4`} type="video/mp4" />
+          <source src={`${import.meta.env.BASE_URL}videos/landing-hero-video.mp4`} type="video/mp4" />
         </video>
         {/* Gradient overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />

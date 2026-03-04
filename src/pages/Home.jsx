@@ -620,8 +620,8 @@ function Home() {
                 ))}
               </div>
               
-              <Link to="/contact" className="btn-glow mt-8 inline-flex">
-                Get In Touch
+              <Link to="/discovery-call" className="btn-glow mt-8 inline-flex">
+                Book a Discovery Call
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </RevealOnScroll>

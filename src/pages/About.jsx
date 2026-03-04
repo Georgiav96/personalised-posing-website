@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { motion, useInView } from 'framer-motion'
+import { motion, useInView, useScroll, useTransform } from 'framer-motion'
 import { ArrowRight, Heart, Sparkles, Target, Users, ChevronDown } from 'lucide-react'
 
 const heroImage = '/images/about-hero-new.jpg'
@@ -195,22 +195,29 @@ const values = [
 ]
 
 function About() {
+  const heroRef = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"]
+  })
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"])
+  
   return (
     <div className="overflow-hidden bg-[#0a0a0a]">
-      {/* Hero Section - Dark with video background */}
-      <section className="relative min-h-[80vh] overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
+      {/* Hero Section - Dark with parallax background */}
+      <section ref={heroRef} className="relative min-h-[80vh] overflow-hidden">
+        {/* Background Image with Parallax */}
+        <motion.div className="absolute inset-0" style={{ y: backgroundY }}>
           <img 
             src={`${import.meta.env.BASE_URL}images/about-hero-bg.jpg`}
             alt="Stage background"
-            className="w-full h-full object-cover"
-            style={{ objectPosition: 'right 20%' }}
+            className="w-full h-full object-cover scale-110"
+            style={{ objectPosition: '100% 15%' }}
           />
           {/* Dark gradient overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/20" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30" />
-        </div>
+        </motion.div>
         
         <FloatingParticles dark />
         

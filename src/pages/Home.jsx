@@ -447,7 +447,7 @@ function Home() {
               Choose Your Path to <span className="text-brand-purple text-glow">Stage Confidence</span>
             </h2>
             <p className="text-white/60 max-w-2xl mx-auto text-lg">
-              Whether you're a first-time competitor or a seasoned athlete, I have coaching designed to help you shine.
+              Whether you're a first-time competitor or a seasoned athlete, I offer a well-rounded range of services to support every aspect of your posing journey.
             </p>
           </RevealOnScroll>
           

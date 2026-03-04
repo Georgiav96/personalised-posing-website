@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { motion, useInView } from 'framer-motion'
 import { ArrowRight, Trophy, Award, Star, Users, Sparkles } from 'lucide-react'
 
-const heroImage = '/images/services-hero.jpg'
+const heroImage = `${import.meta.env.BASE_URL}images/showdays-bg.jpg`
 
 function RevealOnScroll({ children, className = '', delay = 0 }) {
   const ref = useRef(null)

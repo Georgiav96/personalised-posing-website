@@ -372,7 +372,7 @@ const testimonials = [
   {
     quote: "Georgia puts in 110% effort into every one of her posing clients. She really has a great eye for making you look incredible in front of the judges!",
     name: 'Olivia Peskett',
-    title: 'Sports Model Pro',
+    title: 'Sports Model Pro (ICN)',
     image: `${import.meta.env.BASE_URL}images/testimonial-olivia.jpg`,
   },
 ]

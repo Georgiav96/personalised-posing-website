@@ -217,10 +217,10 @@ function Contact() {
                 src="https://app.acuityscheduling.com/schedule.php?owner=30497349&appointmentType=89946196&ref=embedded_csp" 
                 title="Schedule Appointment" 
                 width="100%" 
-                height="800" 
+                height="1100" 
                 frameBorder="0"
                 className="rounded-xl"
-                style={{ minHeight: '800px' }}
+                style={{ minHeight: '1100px' }}
               />
             </div>
           </RevealOnScroll>

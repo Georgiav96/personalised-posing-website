@@ -209,7 +209,7 @@ function Contact() {
                 Book a <span className="text-brand-purple text-glow">Discovery Call</span>
               </h2>
               <p className="text-white/70 max-w-xl mx-auto">
-                Ready to chat? Book a free 15-minute discovery call to discuss your goals and see how we can work together.
+                A free 15-minute call to chat about your competition goals, ask questions, and see if we're the right fit. No pressure, no commitment — just a chance to connect and get clarity on your posing journey. Please complete the short information form as part of your booking — it helps me prepare so we can make the most of our time together.
               </p>
             </div>
             <div className="glass-card-dark p-4 md:p-6 rounded-2xl">

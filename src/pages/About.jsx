@@ -199,18 +199,14 @@ function About() {
     <div className="overflow-hidden bg-[#0a0a0a]">
       {/* Hero Section - Dark with video background */}
       <section className="relative min-h-[80vh] overflow-hidden">
-        {/* Background Video */}
+        {/* Background Image */}
         <div className="absolute inset-0">
-          <video 
-            autoPlay 
-            muted 
-            loop 
-            playsInline
+          <img 
+            src={`${import.meta.env.BASE_URL}images/about-hero-bg.jpg`}
+            alt="Stage background"
             className="w-full h-full object-cover"
             style={{ objectPosition: 'center 40%' }}
-          >
-            <source src={`${import.meta.env.BASE_URL}videos/about-video.mp4`} type="video/mp4" />
-          </video>
+          />
           {/* Dark gradient overlays */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30" />

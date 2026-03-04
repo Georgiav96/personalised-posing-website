@@ -41,6 +41,82 @@ function AutoplayVideo() {
   )
 }
 
+// Click-to-play video component with hover play button
+function ClickToPlayVideo({ src }) {
+  const videoRef = useRef(null)
+  const [isPlaying, setIsPlaying] = useState(false)
+  const [isHovered, setIsHovered] = useState(false)
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause()
+        setIsPlaying(false)
+      } else {
+        videoRef.current.play()
+        setIsPlaying(true)
+      }
+    }
+  }
+
+  const handleVideoEnd = () => {
+    setIsPlaying(false)
+  }
+
+  return (
+    <div 
+      className="relative w-full cursor-pointer group"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onClick={togglePlay}
+    >
+      <video
+        ref={videoRef}
+        className="w-full h-auto object-cover"
+        src={src}
+        playsInline
+        preload="metadata"
+        onEnded={handleVideoEnd}
+      />
+      {/* Play/Pause Button Overlay */}
+      <motion.div 
+        className="absolute inset-0 flex items-center justify-center bg-black/30"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isHovered && !isPlaying ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+      >
+        <motion.div 
+          className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-brand-purple/90 backdrop-blur flex items-center justify-center"
+          whileHover={{ scale: 1.1 }}
+          style={{ boxShadow: '0 0 40px rgba(149, 0, 255, 0.5)' }}
+        >
+          <svg className="w-8 h-8 md:w-10 md:h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </motion.div>
+      </motion.div>
+      {/* Pause indicator when playing */}
+      {isPlaying && isHovered && (
+        <motion.div 
+          className="absolute inset-0 flex items-center justify-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+        >
+          <motion.div 
+            className="w-16 h-16 rounded-full bg-black/50 backdrop-blur flex items-center justify-center"
+            whileHover={{ scale: 1.1 }}
+          >
+            <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
+            </svg>
+          </motion.div>
+        </motion.div>
+      )}
+    </div>
+  )
+}
+
 // Scroll reveal wrapper component
 function RevealOnScroll({ children, className = '', delay = 0, direction = 'up' }) {
   const ref = useRef(null)
@@ -651,6 +727,11 @@ function Home() {
             </div>
           </RevealOnScroll>
         </div>
+      </section>
+
+      {/* Video Break Section */}
+      <section className="bg-[#0a0a0a]">
+        <ClickToPlayVideo src={`${import.meta.env.BASE_URL}videos/section-break-video-web.mp4`} />
       </section>
 
       {/* Imagine Show Day - Dark Side by Side */}

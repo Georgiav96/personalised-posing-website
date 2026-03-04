@@ -10,33 +10,57 @@ const heroBackground = `${import.meta.env.BASE_URL}images/hero-background.jpg`
 const transformImage = `${import.meta.env.BASE_URL}images/driven-section.jpg`
 const commitmentImage = '/images/marketing-shoot/05102025_GeorgiaVoice_High-805.jpg'
 
-// Autoplay video component - plays when scrolled into view
+// Autoplay video component - plays when scrolled into view with delay and fade
 function AutoplayVideo() {
   const containerRef = useRef(null)
   const videoRef = useRef(null)
+  const [isVisible, setIsVisible] = useState(false)
+  const [hasStarted, setHasStarted] = useState(false)
   const isInView = useInView(containerRef, { once: false, amount: 0.3 })
   
   useEffect(() => {
+    let timer
     if (videoRef.current) {
-      if (isInView) {
-        videoRef.current.play().catch(() => {})
-      } else {
+      if (isInView && !hasStarted) {
+        // 4 second delay before playing
+        timer = setTimeout(() => {
+          videoRef.current.play().then(() => {
+            setIsVisible(true)
+            setHasStarted(true)
+          }).catch(() => {
+            // If autoplay with audio blocked, try muted
+            videoRef.current.muted = true
+            videoRef.current.play().then(() => {
+              setIsVisible(true)
+              setHasStarted(true)
+            })
+          })
+        }, 4000)
+      } else if (!isInView && hasStarted) {
         videoRef.current.pause()
+        setIsVisible(false)
+        setHasStarted(false)
       }
     }
-  }, [isInView])
+    return () => clearTimeout(timer)
+  }, [isInView, hasStarted])
   
   return (
     <div ref={containerRef} className="w-full">
-      <video
-        ref={videoRef}
-        className="w-full h-auto object-cover"
-        src={`${import.meta.env.BASE_URL}videos/action-video-web.mp4`}
-        muted
-        loop
-        playsInline
-        preload="metadata"
-      />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isVisible ? 1 : 0.3 }}
+        transition={{ duration: 1.5, ease: 'easeOut' }}
+      >
+        <video
+          ref={videoRef}
+          className="w-full h-auto object-cover"
+          src={`${import.meta.env.BASE_URL}videos/action-video-web.mp4`}
+          loop
+          playsInline
+          preload="metadata"
+        />
+      </motion.div>
     </div>
   )
 }

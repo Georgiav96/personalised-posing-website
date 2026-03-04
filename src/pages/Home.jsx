@@ -67,7 +67,7 @@ function AutoplayVideo() {
 }
 
 // Click-to-play video component with hover play button
-function ClickToPlayVideo({ src }) {
+function ClickToPlayVideo({ src, poster }) {
   const videoRef = useRef(null)
   const [isPlaying, setIsPlaying] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
@@ -99,6 +99,7 @@ function ClickToPlayVideo({ src }) {
         ref={videoRef}
         className="w-full h-auto object-cover"
         src={src}
+        poster={poster}
         playsInline
         preload="metadata"
         onEnded={handleVideoEnd}
@@ -761,7 +762,10 @@ function Home() {
 
       {/* Video Break Section */}
       <section className="bg-[#0a0a0a]">
-        <ClickToPlayVideo src={`${import.meta.env.BASE_URL}videos/section-break-video-web.mp4`} />
+        <ClickToPlayVideo 
+          src={`${import.meta.env.BASE_URL}videos/section-break-video-web.mp4`} 
+          poster={`${import.meta.env.BASE_URL}images/video-poster.jpg`}
+        />
       </section>
 
       {/* Imagine Show Day - Dark Side by Side */}

@@ -118,7 +118,7 @@ function ShowDays() {
           <img 
             src={heroImage}
             alt="Results"
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-center"
           />
           {/* Dark gradient overlays */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/50" />
@@ -155,6 +155,40 @@ function ShowDays() {
             >
               Numbers don't lie. See what my athletes have achieved on stages across the world.
             </motion.p>
+          </div>
+        </div>
+      </section>
+
+      {/* Photo Gallery Carousel */}
+      <section className="py-12 bg-[#0f0f0f] overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4 mb-8">
+          <RevealOnScroll className="text-center">
+            <span className="badge-dark mb-4">
+              Gallery
+            </span>
+            <h2 className="text-3xl md:text-4xl font-heading text-white">
+              Stage <span className="text-brand-purple text-glow">Moments</span>
+            </h2>
+          </RevealOnScroll>
+        </div>
+        <div className="relative">
+          <div className="flex gap-4 animate-scroll-slow">
+            {[...Array(8)].map((_, i) => (
+              <div 
+                key={i} 
+                className="flex-shrink-0 w-72 h-96 rounded-2xl bg-gradient-to-br from-brand-purple/20 to-brand-purple/5 border border-brand-purple/20 flex items-center justify-center"
+              >
+                <span className="text-white/30 text-sm">Photo {i + 1}</span>
+              </div>
+            ))}
+            {[...Array(8)].map((_, i) => (
+              <div 
+                key={`dup-${i}`} 
+                className="flex-shrink-0 w-72 h-96 rounded-2xl bg-gradient-to-br from-brand-purple/20 to-brand-purple/5 border border-brand-purple/20 flex items-center justify-center"
+              >
+                <span className="text-white/30 text-sm">Photo {i + 1}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>

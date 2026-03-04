@@ -559,6 +559,20 @@
   animation: marquee 30s linear infinite;
 }
 
+.animate-scroll-slow {
+  display: flex;
+  animation: scroll-slow 40s linear infinite;
+}
+
+@keyframes scroll-slow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* ========================================
    FAQ
    ======================================== */

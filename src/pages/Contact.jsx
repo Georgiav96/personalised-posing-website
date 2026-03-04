@@ -164,66 +164,44 @@ function Contact() {
 
   return (
     <div className="overflow-hidden bg-[#0a0a0a]">
-      {/* Hero Section - Dark */}
-      <section className="relative pt-32 pb-16 overflow-hidden">
+      {/* Book a Discovery Call - Hero */}
+      <section className="relative pt-32 pb-16 bg-[#0a0a0a] overflow-hidden">
         <FloatingParticles dark />
-        
-        <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <span className="badge-dark mb-6">
-              <Sparkles className="w-4 h-4" />
-              Get In Touch
-            </span>
-          </motion.div>
-          
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-heading text-white mb-4"
-          >
-            Let's <span className="text-brand-purple text-glow">Connect</span>
-          </motion.h1>
-          
-          <motion.p
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+          <div className="text-center mb-10">
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-heading text-white mb-6"
+            >
+              Book a <span className="text-brand-purple text-glow">Discovery Call</span>
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed"
+            >
+              A free 15-minute call to chat about your competition goals, ask questions, and see if we're the right fit. No pressure, no commitment — just a chance to connect and get clarity on your posing journey. Please complete the short information form as part of your booking — it helps me prepare so we can make the most of our time together.
+            </motion.p>
+          </div>
+          <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-white/70 max-w-2xl mx-auto leading-relaxed"
+            className="glass-card-dark p-4 md:p-6 rounded-2xl"
           >
-            Have a question or ready to get started? I'd love to hear from you.
-          </motion.p>
-        </div>
-      </section>
-
-      {/* Book a Discovery Call - Dark */}
-      <section className="py-16 bg-[#0a0a0a] relative overflow-hidden">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-          <RevealOnScroll>
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-heading text-white mb-4">
-                Book a <span className="text-brand-purple text-glow">Discovery Call</span>
-              </h2>
-              <p className="text-white/70 max-w-xl mx-auto">
-                A free 15-minute call to chat about your competition goals, ask questions, and see if we're the right fit. No pressure, no commitment — just a chance to connect and get clarity on your posing journey. Please complete the short information form as part of your booking — it helps me prepare so we can make the most of our time together.
-              </p>
-            </div>
-            <div className="glass-card-dark p-4 md:p-6 rounded-2xl">
-              <iframe 
-                src="https://app.acuityscheduling.com/schedule.php?owner=30497349&appointmentType=89946196&ref=embedded_csp" 
-                title="Schedule Appointment" 
-                width="100%" 
-                height="1100" 
-                frameBorder="0"
-                className="rounded-xl"
-                style={{ minHeight: '1100px' }}
-              />
-            </div>
-          </RevealOnScroll>
+            <iframe 
+              src="https://app.acuityscheduling.com/schedule.php?owner=30497349&appointmentType=89946196&ref=embedded_csp" 
+              title="Schedule Appointment" 
+              width="100%" 
+              height="1100" 
+              frameBorder="0"
+              className="rounded-xl"
+              style={{ minHeight: '1100px' }}
+            />
+          </motion.div>
         </div>
       </section>
 

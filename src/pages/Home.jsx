@@ -309,14 +309,20 @@ function Home() {
 
   return (
     <div className="overflow-x-hidden bg-[#0a0a0a]">
-      {/* Hero Section - Dark */}
-      <section ref={heroRef} className="relative min-h-screen overflow-hidden bg-black">
+      {/* Hero Section - Dark with fade-in */}
+      <motion.section 
+        ref={heroRef} 
+        className="relative min-h-screen overflow-hidden bg-black"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+      >
         {/* Background Image */}
         <div className="absolute inset-0 bg-black">
           <img 
             src={`${import.meta.env.BASE_URL}images/hero-athlete.jpg`}
             alt="Stage athlete"
-            className="w-full h-full object-cover object-right"
+            className="w-full h-full object-cover object-center"
           />
           {/* Dark gradient overlays - semi-transparent to show particles */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
@@ -393,7 +399,7 @@ function Home() {
             ))}
           </StaggerContainer>
         </div>
-      </section>
+      </motion.section>
 
       {/* Tagline Marquee - Dark */}
       <section className="py-8 bg-black/50 border-y border-white/5 overflow-hidden">

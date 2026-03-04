@@ -318,9 +318,9 @@ function Home() {
             alt="Stage athlete"
             className="w-full h-full object-cover object-right"
           />
-          {/* Dark gradient overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
+          {/* Dark gradient overlays - semi-transparent to show particles */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
         </div>
         
         <FloatingParticles dark />

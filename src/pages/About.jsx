@@ -4,7 +4,7 @@ import { motion, useInView } from 'framer-motion'
 import { ArrowRight, Heart, Sparkles, Target, Users, ChevronDown } from 'lucide-react'
 
 const heroImage = '/images/about-hero-new.jpg'
-const storyImage = '/images/marketing-shoot/05102025_GeorgiaVoice_High-347.jpg'
+const storyImage = '/images/coaching-what-i-do.jpg'
 const performingArtsImage = '/images/performing-arts-new.jpg'
 const approachImage = '/images/marketing-shoot/05102025_GeorgiaVoice_High-805.jpg'
 

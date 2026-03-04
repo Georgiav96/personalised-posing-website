@@ -163,11 +163,11 @@ function Services() {
                   Recommended
                 </div>
                 
-                <div className="h-48 relative overflow-hidden rounded-2xl mb-6 -mx-8 -mt-8 px-8 pt-8">
+                <div className="h-48 relative overflow-hidden rounded-2xl mb-6 -mx-8 -mt-8">
                   <img 
                     src={ongoingImage}
                     alt="Ongoing Coaching"
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-purple to-transparent" />
                   <h3 className="absolute bottom-4 left-8 text-3xl font-heading text-white text-glow-white">Ongoing Coaching</h3>
@@ -243,13 +243,13 @@ function Services() {
             {/* Casual Coaching - Dark */}
             <RevealOnScroll direction="right" delay={0.2}>
               <div className="bento-card-dark overflow-hidden h-full flex flex-col">
-                <div className="h-48 relative overflow-hidden rounded-2xl mb-6 -mx-8 -mt-8 px-8 pt-8">
+                <div className="h-48 relative overflow-hidden rounded-2xl mb-6 -mx-8 -mt-8">
                   <img 
                     src={casualImage}
                     alt="Casual Coaching"
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-black/30" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f0f] to-transparent" />
                   <h3 className="absolute bottom-4 left-8 text-3xl font-heading text-white">Casual Coaching</h3>
                 </div>
                 

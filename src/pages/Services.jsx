@@ -386,7 +386,7 @@ function Services() {
               Before You Sign Up for <span className="text-brand-purple text-glow">Ongoing Coaching</span>
             </h2>
             <p className="text-white/60 max-w-2xl mx-auto">
-              Ongoing Coaching is a structured, committed program. Please read this carefully before signing up.
+              Ongoing Coaching is a structured posing program designed for athletes who take their posing as seriously as they take their prep.
             </p>
           </RevealOnScroll>
 

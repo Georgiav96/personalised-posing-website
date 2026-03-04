@@ -749,8 +749,9 @@ function Home() {
                 Then You Are Exactly Who I Am Here To Help
               </h3>
               <p className="text-white/80 text-lg max-w-2xl mx-auto">
-                You're not behind. You're not bad at posing. You just haven't been shown 
-                how to move with confidence in your own body yet.
+                You're not behind. You're not bad at posing.
+                <br />
+                <span className="mt-2 inline-block">You just haven't been shown how to move with confidence in your own body yet.</span>
               </p>
             </div>
           </RevealOnScroll>

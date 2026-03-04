@@ -46,15 +46,16 @@ function AutoplayVideo() {
   }, [isInView, hasStarted])
   
   return (
-    <div ref={containerRef} className="w-full">
+    <div ref={containerRef} className="w-full max-h-[80vh] overflow-hidden flex items-center justify-center bg-black">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: isVisible ? 1 : 0.3 }}
         transition={{ duration: 1.5, ease: 'easeOut' }}
+        className="w-full h-full flex items-center justify-center"
       >
         <video
           ref={videoRef}
-          className="w-full h-auto object-cover"
+          className="w-full h-auto max-h-[80vh] object-contain"
           src={`${import.meta.env.BASE_URL}videos/action-video-web.mp4`}
           loop
           playsInline

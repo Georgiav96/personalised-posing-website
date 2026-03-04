@@ -306,11 +306,13 @@ function Services() {
                   </div>
                 </div>
 
-                <div className="mb-6">
+                <div className="bg-black/30 backdrop-blur rounded-xl p-4 mb-6 border border-white/10">
+                  <h4 className="font-semibold text-white mb-3">Pricing:</h4>
                   <div className="flex justify-between items-center">
                     <span className="font-medium text-white">Single Session</span>
-                    <span className="font-heading text-2xl text-brand-purple">$130</span>
+                    <span className="font-heading text-xl text-brand-purple">$130</span>
                   </div>
+                  <p className="text-xs text-white/60 mt-3">45-minute session • In-person or online</p>
                 </div>
 
                 <Link to="/signup?service=casual" className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300 inline-flex items-center justify-center w-full mt-auto">

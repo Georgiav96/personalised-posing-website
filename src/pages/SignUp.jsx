@@ -106,7 +106,17 @@ const SignUp = () => {
   const labelClass = "block text-sm font-medium text-brand-black mb-1"
 
   return (
-    <div className="pt-28 lg:pt-20 bg-white min-h-screen">
+    <div className="pt-28 lg:pt-20 min-h-screen relative">
+      {/* Background Image with Dark Overlay */}
+      <div className="fixed inset-0 z-0">
+        <img 
+          src={`${import.meta.env.BASE_URL}images/payment-bg.jpg`}
+          alt=""
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/70" />
+      </div>
+      <div className="relative z-10">
       {/* Hero */}
       <section className="py-12 bg-brand-purple text-white text-center">
         <div className="max-w-4xl mx-auto px-4">
@@ -735,6 +745,7 @@ const SignUp = () => {
 
         </div>
       </section>
+      </div>
     </div>
   )
 }

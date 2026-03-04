@@ -702,18 +702,17 @@ function Home() {
         </div>
       </section>
 
-      {/* Process Section - Dark with background image */}
-      <section className="section-padding relative overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img 
-            src={`${import.meta.env.BASE_URL}images/journey-bg.jpg`}
-            alt=""
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/80" />
-        </div>
-        <div className="max-w-4xl mx-auto relative z-10">
+      {/* Process Section - Dark with parallax background */}
+      <section className="section-padding relative overflow-hidden process-section-parallax">
+        {/* Parallax Background Image */}
+        <div 
+          className="absolute inset-0 parallax-bg"
+          style={{
+            backgroundImage: `url(${import.meta.env.BASE_URL}images/journey-bg.jpg)`,
+          }}
+        />
+        <div className="absolute inset-0 bg-black/80" />
+        <div className="max-w-5xl mx-auto relative z-10">
           <RevealOnScroll className="text-center mb-16">
             <span className="badge-dark mb-4">
               The Process
@@ -723,17 +722,25 @@ function Home() {
             </h2>
           </RevealOnScroll>
           
-          <div className="space-y-0">
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.1}>
             {processSteps.map((step, index) => (
-              <RevealOnScroll key={index} delay={index * 0.1}>
-                <div className="process-step">
-                  <div className="step-number">{step.step}</div>
-                  <h3 className="text-xl font-heading mb-3 text-white">{step.title}</h3>
-                  <p className="text-white/60 leading-relaxed">{step.description}</p>
-                </div>
-              </RevealOnScroll>
+              <StaggerItem key={index}>
+                <motion.div 
+                  className="process-step-box"
+                  whileHover={{ 
+                    y: -8, 
+                    boxShadow: '0 20px 40px rgba(149, 0, 255, 0.25), 0 0 60px rgba(149, 0, 255, 0.15)',
+                    borderColor: 'rgba(149, 0, 255, 0.5)'
+                  }}
+                  transition={{ duration: 0.3, ease: 'easeOut' }}
+                >
+                  <div className="step-number-box">{step.step}</div>
+                  <h3 className="text-lg font-heading mb-2 text-white">{step.title}</h3>
+                  <p className="text-white/60 text-sm leading-relaxed">{step.description}</p>
+                </motion.div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
           
           <RevealOnScroll delay={0.5}>
             <div className="glass-card-dark-purple p-8 text-center mt-8">

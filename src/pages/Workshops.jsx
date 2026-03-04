@@ -57,34 +57,41 @@ function FloatingParticles() {
 function Workshops() {
   return (
     <div className="overflow-hidden bg-[#0a0a0a]">
-      {/* Hero - Dark */}
-      <section className="relative pt-32 pb-16 overflow-hidden">
+      {/* Hero - Dark, left aligned */}
+      <section className="relative min-h-[50vh] overflow-hidden">
         <FloatingParticles />
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <motion.span
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="badge-dark mb-6"
-          >
-            <Sparkles className="w-4 h-4" />
-            Group Learning
-          </motion.span>
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-heading text-white mb-4"
-          >
-            Posing <span className="text-brand-purple text-glow">Workshops</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-lg text-white/70 max-w-xl mx-auto"
-          >
-            Hands-on guidance, expert feedback, and a chance to connect with fellow competitors.
-          </motion.p>
+        {/* Gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/95 to-black/70" />
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-8 py-20 lg:px-16 xl:px-20 pt-32 lg:pt-36 min-h-[50vh] flex items-center">
+          <div className="max-w-xl">
+            <motion.span
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="badge-dark mb-6"
+            >
+              <Sparkles className="w-4 h-4" />
+              Group Learning
+            </motion.span>
+            
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-heading text-white mb-6"
+            >
+              Posing <span className="text-brand-purple text-glow">Workshops</span>
+            </motion.h1>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-xl text-white/80 max-w-lg leading-relaxed"
+            >
+              Hands-on guidance, expert feedback, and a chance to connect with fellow competitors.
+            </motion.p>
+          </div>
         </div>
       </section>
 

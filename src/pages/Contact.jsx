@@ -164,34 +164,45 @@ function Contact() {
 
   return (
     <div className="overflow-hidden bg-[#0a0a0a]">
-      {/* Contact Hero */}
-      <section className="relative pt-32 pb-8 bg-[#0a0a0a] overflow-hidden">
+      {/* Contact Hero - Left aligned */}
+      <section className="relative min-h-[50vh] overflow-hidden">
         <FloatingParticles dark />
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="text-center">
+        {/* Gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/95 to-black/70" />
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-8 py-20 lg:px-16 xl:px-20 pt-32 lg:pt-36 min-h-[50vh] flex items-center">
+          <div className="max-w-xl">
+            <motion.span
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="badge-dark mb-6"
+            >
+              <Sparkles className="w-4 h-4" />
+              Let's Connect
+            </motion.span>
+            
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ delay: 0.1 }}
               className="text-4xl md:text-5xl lg:text-6xl font-heading text-white mb-6"
             >
               Get In <span className="text-brand-purple text-glow">Touch</span>
             </motion.h1>
+            
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed"
+              transition={{ delay: 0.2 }}
+              className="text-xl text-white/80 max-w-lg leading-relaxed mb-8"
             >
-              Have questions or ready to start your posing journey?
-              <br />
-              <span className="mt-1 inline-block">Send me a message below or book a free discovery call.</span>
+              Have questions or ready to start your posing journey? Send me a message below or book a free discovery call.
             </motion.p>
+            
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="mt-8"
+              transition={{ delay: 0.3 }}
             >
               <Link to="/discovery-call" className="btn-glow">
                 Book a Free Discovery Call

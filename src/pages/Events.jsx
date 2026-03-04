@@ -69,8 +69,8 @@ function GlowingIcon({ icon: Icon, className = '' }) {
 function Events() {
   return (
     <div className="overflow-hidden bg-[#0a0a0a]">
-      {/* Hero - Dark with video background */}
-      <section className="relative pt-32 pb-16 overflow-hidden min-h-[50vh]">
+      {/* Hero - Dark with video background, left aligned */}
+      <section className="relative min-h-[60vh] overflow-hidden">
         {/* Background Video */}
         <div className="absolute inset-0">
           <video 
@@ -83,34 +83,40 @@ function Events() {
           >
             <source src={`${import.meta.env.BASE_URL}videos/events-video.mp4`} type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
         </div>
         <FloatingParticles />
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <motion.span
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="badge-dark mb-6"
-          >
-            <Sparkles className="w-4 h-4" />
-            Community
-          </motion.span>
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-heading text-white mb-4"
-          >
-            Events & <span className="text-brand-purple text-glow">Team Shoots</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-lg text-white/70 max-w-xl mx-auto"
-          >
-            Connect with like-minded women, celebrate wins together, and capture memories.
-          </motion.p>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-8 py-20 lg:px-16 xl:px-20 pt-32 lg:pt-36 min-h-[60vh] flex items-center">
+          <div className="max-w-xl">
+            <motion.span
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="badge-dark mb-6"
+            >
+              <Sparkles className="w-4 h-4" />
+              Community
+            </motion.span>
+            
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-heading text-white mb-6"
+            >
+              Events & <span className="text-brand-purple text-glow">Team Shoots</span>
+            </motion.h1>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-xl text-white/80 max-w-lg leading-relaxed"
+            >
+              Connect with like-minded women, celebrate wins together, and capture memories.
+            </motion.p>
+          </div>
         </div>
       </section>
 

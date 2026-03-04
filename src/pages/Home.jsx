@@ -745,8 +745,9 @@ function Home() {
           <RevealOnScroll delay={0.5}>
             <div className="glass-card-dark-purple p-8 text-center mt-8">
               <p className="text-lg text-white/90">
-                I don't just teach poses. I teach you how to present your physique with intention — 
-                so you show up feeling <span className="text-brand-purple font-semibold">prepared, powerful, and proud.</span>
+                I don't just teach poses. I teach you how to present your physique with intention —
+                <br />
+                <span className="mt-2 inline-block">so you show up feeling <span className="text-brand-purple font-semibold">prepared, powerful, and proud.</span></span>
               </p>
             </div>
           </RevealOnScroll>

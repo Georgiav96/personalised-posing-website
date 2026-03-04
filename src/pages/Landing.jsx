@@ -40,13 +40,17 @@ function FloatingParticles() {
 function Landing() {
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0">
-        <img 
-          src="/images/landing-hero.jpg" 
-          alt="Stage Ready"
+        <video 
+          autoPlay
+          muted
+          loop
+          playsInline
           className="w-full h-full object-cover"
-        />
+        >
+          <source src="/videos/action-video-web.mp4" type="video/mp4" />
+        </video>
         {/* Gradient overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30" />

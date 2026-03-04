@@ -311,20 +311,15 @@ function Home() {
     <div className="overflow-x-hidden bg-[#0a0a0a]">
       {/* Hero Section - Dark */}
       <section ref={heroRef} className="relative min-h-screen overflow-hidden">
-        {/* Background Video */}
+        {/* Background Image */}
         <div className="absolute inset-0">
-          <video 
-            autoPlay 
-            muted 
-            loop 
-            playsInline
-            className="w-full h-full object-cover"
-            style={{ objectPosition: 'center 40%' }}
-          >
-            <source src={`${import.meta.env.BASE_URL}videos/about-video.mp4`} type="video/mp4" />
-          </video>
+          <img 
+            src="/images/hero-athlete.jpg"
+            alt="Stage athlete"
+            className="w-full h-full object-cover object-right"
+          />
           {/* Dark gradient overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
         </div>
         

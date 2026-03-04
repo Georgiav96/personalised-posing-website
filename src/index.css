@@ -776,18 +776,41 @@
 }
 
 .bento-card-dark-featured {
-  background: linear-gradient(135deg, rgba(149, 0, 255, 0.3) 0%, rgba(149, 0, 255, 0.1) 100%);
+  background: rgba(15, 15, 15, 0.8);
   color: white;
   padding: 2rem;
   border-radius: 1.5rem;
-  border: 1px solid rgba(149, 0, 255, 0.4);
-  box-shadow: 0 20px 60px rgba(149, 0, 255, 0.3);
+  border: 1px solid rgba(149, 0, 255, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.bento-card-dark-featured::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(149, 0, 255, 0.4) 0%, rgba(191, 95, 255, 0.2) 50%, rgba(149, 0, 255, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bento-card-dark-featured:hover::before {
+  opacity: 1;
 }
 
 .bento-card-dark-featured:hover {
-  box-shadow: 0 30px 80px rgba(149, 0, 255, 0.4);
+  border-color: rgba(149, 0, 255, 0.6);
+  box-shadow: 0 20px 60px rgba(149, 0, 255, 0.4), 0 0 80px rgba(149, 0, 255, 0.2);
   transform: translateY(-8px);
+}
+
+.bento-card-dark-featured > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Dark stat cards */

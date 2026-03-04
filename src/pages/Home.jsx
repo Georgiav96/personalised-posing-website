@@ -420,6 +420,20 @@ function Home() {
         <AutoplayVideo />
       </section>
 
+      {/* Tagline Marquee - After Video */}
+      <section className="py-8 bg-black/50 border-y border-white/5 overflow-hidden">
+        <div className="animate-marquee whitespace-nowrap">
+          {[...Array(8)].map((_, index) => (
+            <span key={index} className="inline-flex items-center">
+              <span className="text-white/60 font-heading text-2xl mx-8">
+                More Than Just a Posing Coach
+              </span>
+              <span className="text-brand-purple mx-4">✦</span>
+            </span>
+          ))}
+        </div>
+      </section>
+
       {/* Services Section - Dark with glowing icons */}
       <section className="section-padding bg-[#0f0f0f] relative overflow-hidden">
         <FloatingParticles dark />

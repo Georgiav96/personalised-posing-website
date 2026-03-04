@@ -31,7 +31,7 @@ function AutoplayVideo() {
       <video
         ref={videoRef}
         className="w-full h-auto object-cover"
-        src="/videos/action-video-web.mp4"
+        src={`${import.meta.env.BASE_URL}videos/action-video-web.mp4`}
         muted
         loop
         playsInline
@@ -314,7 +314,7 @@ function Home() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="/images/hero-athlete.jpg"
+            src={`${import.meta.env.BASE_URL}images/hero-athlete.jpg`}
             alt="Stage athlete"
             className="w-full h-full object-cover object-right"
           />

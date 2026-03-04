@@ -49,7 +49,7 @@ function Landing() {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/videos/action-video-web.mp4" type="video/mp4" />
+          <source src={`${import.meta.env.BASE_URL}videos/action-video-web.mp4`} type="video/mp4" />
         </video>
         {/* Gradient overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
@@ -69,7 +69,7 @@ function Landing() {
             className="mb-6"
           >
             <img 
-              src="/images/logos/logo-main.png" 
+              src={`${import.meta.env.BASE_URL}images/logos/logo-main.png`} 
               alt="Personalised Posing" 
               className="h-16 md:h-20 mx-auto lg:mx-0 brightness-0 invert"
             />

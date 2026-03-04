@@ -45,7 +45,7 @@ function Navbar() {
             {/* Logo - Left */}
             <Link to="/" className="flex items-center">
               <img 
-                src="/images/logos/logo-main.png" 
+                src={`${import.meta.env.BASE_URL}images/logos/logo-main.png`} 
                 alt="Personalised Posing" 
                 className="h-14 sm:h-16 lg:h-20 w-auto brightness-0 invert"
               />

@@ -187,6 +187,7 @@ function Services() {
                       'Direct coach support via Telegram',
                       'Discount on Koko Australia Stagewear',
                       'Discount on Life Portraits Photography packages',
+                      'Competition Day Support*',
                     ].map((feature, index) => (
                       <li key={index} className="flex items-start gap-2 text-sm text-white/80">
                         <Check className="w-4 h-4 text-white mt-0.5 flex-shrink-0" />
@@ -194,6 +195,7 @@ function Services() {
                       </li>
                     ))}
                   </ul>
+                  <p className="mt-2 text-xs text-white/50 italic">*Subject to location & availability — show dates may conflict and priority is given to shows with majority of clients.</p>
                   <p className="mt-3 text-sm text-brand-purple flex items-center gap-2">
                     <span>💜</span> Pay upfront and receive a FREE Personalised Posing Bikini!
                   </p>
@@ -271,15 +273,16 @@ function Services() {
                       Federation-specific guidance
                     </li>
                   </ul>
-                  <ul className="space-y-2 mt-3 opacity-50">
+                  <ul className="space-y-2 mt-3">
                     {[
-                      'No portal access',
-                      'No check-in submissions',
-                      'No ongoing coach support',
-                      'No community access',
-                      'No VIP discounts',
+                      '6 x online posing check-in submissions',
+                      'Client Portal & Resource Centre access',
+                      'Direct coach support via Telegram',
+                      'Discount on Koko Australia Stagewear',
+                      'Discount on Life Portraits Photography packages',
+                      'Competition Day Support',
                     ].map((feature, index) => (
-                      <li key={index} className="flex items-start gap-2 text-sm text-white/60">
+                      <li key={index} className="flex items-start gap-2 text-sm text-white/40">
                         <X className="w-4 h-4 text-white/30 mt-0.5 flex-shrink-0" />
                         {feature}
                       </li>

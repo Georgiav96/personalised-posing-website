@@ -410,18 +410,7 @@ function Home() {
       </section>
 
       {/* Video Section - Full Width Autoplay */}
-      <section className="bg-[#0a0a0a] relative overflow-hidden">
-        <FloatingParticles dark />
-        <div className="relative z-10 text-center py-12 md:py-16">
-          <RevealOnScroll className="mb-8 px-4">
-            <span className="badge-dark mb-4">
-              See It In Action
-            </span>
-            <h2 className="text-3xl md:text-4xl font-heading text-white mb-4">
-              Watch How I <span className="text-brand-purple text-glow">Help Athletes Shine</span>
-            </h2>
-          </RevealOnScroll>
-        </div>
+      <section className="bg-[#0a0a0a]">
         <AutoplayVideo />
       </section>
 
@@ -447,7 +436,7 @@ function Home() {
               <StaggerItem key={index}>
                 <Link 
                   to={service.link}
-                  className={`${service.featured ? 'bento-card-dark-featured' : 'bento-card-dark'} group block overflow-hidden`}
+                  className="bento-card-dark-featured group block overflow-hidden"
                 >
                   {service.image && (
                     <div className="h-48 -mx-8 -mt-8 mb-6 overflow-hidden">
@@ -546,14 +535,14 @@ function Home() {
               Success Stories
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading text-white mb-4">
-              Real Results. <span className="text-brand-purple text-glow">Real Transformations.</span>
+              Real People. <span className="text-brand-purple text-glow">Real Results.</span>
             </h2>
           </RevealOnScroll>
           
           <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.15}>
             {testimonials.map((testimonial, index) => (
               <StaggerItem key={index}>
-                <div className={testimonial.featured ? 'bento-card-dark-featured h-full flex flex-col' : 'testimonial-card-dark h-full flex flex-col'}>
+                <div className="bento-card-dark-featured h-full flex flex-col">
                   {testimonial.image && (
                     <div className="w-28 h-28 rounded-full overflow-hidden mb-4 border-2 border-brand-purple/30 mx-auto">
                       <img 
@@ -692,9 +681,18 @@ function Home() {
         </div>
       </section>
 
-      {/* Process Section - Dark */}
-      <section className="section-padding bg-[#0f0f0f]">
-        <div className="max-w-4xl mx-auto">
+      {/* Process Section - Dark with background image */}
+      <section className="section-padding relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src={`${import.meta.env.BASE_URL}images/journey-bg.jpg`}
+            alt=""
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/80" />
+        </div>
+        <div className="max-w-4xl mx-auto relative z-10">
           <RevealOnScroll className="text-center mb-16">
             <span className="badge-dark mb-4">
               The Process

@@ -322,7 +322,8 @@ function Home() {
           <img 
             src={`${import.meta.env.BASE_URL}images/hero-athlete.jpg`}
             alt="Stage athlete"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: 'center 30%' }}
           />
           {/* Dark gradient overlays - semi-transparent to show particles */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />

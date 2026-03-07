@@ -122,7 +122,7 @@ function ShowDays() {
           style={{ 
             backgroundImage: `url(${heroImage})`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center right',
+            backgroundPosition: 'right center',
             backgroundAttachment: 'fixed'
           }}
         />

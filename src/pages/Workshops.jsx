@@ -129,22 +129,6 @@ function Workshops() {
         </div>
       </section>
 
-      {/* Workshop Video */}
-      <section className="bg-[#0a0a0a] relative overflow-hidden">
-        <div className="relative z-10 w-full">
-          <div className="aspect-video w-full overflow-hidden">
-            <iframe
-              src="https://drive.google.com/file/d/1w2-haLBPXeIMghcf-6HnASygJkg5t3ri/preview?autoplay=1"
-              className="w-full h-full"
-              frameBorder="0"
-              allow="autoplay; fullscreen"
-              allowFullScreen
-              title="Workshop Video"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* The 3 Workshop Pillars */}
       <section className="section-padding bg-[#0f0f0f]">
         <div className="max-w-6xl mx-auto">

@@ -518,9 +518,12 @@ function Home() {
         </div>
       </section>
 
-      {/* Video Section - Full Width Autoplay */}
+      {/* Video Section - Click to Play */}
       <section className="bg-[#0a0a0a]">
-        <AutoplayVideo />
+        <ClickToPlayVideo 
+          src={`${import.meta.env.BASE_URL}videos/action-video-web.mp4`}
+          poster={`${import.meta.env.BASE_URL}images/action-video-poster.jpg`}
+        />
       </section>
 
       {/* Tagline Marquee - After Video */}

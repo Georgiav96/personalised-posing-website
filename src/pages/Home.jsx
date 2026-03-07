@@ -67,7 +67,7 @@ function AutoplayVideo() {
 }
 
 // Click-to-play video component with hover play button
-function ClickToPlayVideo({ src, poster }) {
+function ClickToPlayVideo({ src, poster, fillScreen = false }) {
   const videoRef = useRef(null)
   const [isPlaying, setIsPlaying] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
@@ -90,14 +90,14 @@ function ClickToPlayVideo({ src, poster }) {
 
   return (
     <div 
-      className="relative w-full cursor-pointer group"
+      className={`relative w-full cursor-pointer group ${fillScreen ? 'h-screen' : ''}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={togglePlay}
     >
       <video
         ref={videoRef}
-        className="w-full h-auto object-cover"
+        className={`w-full ${fillScreen ? 'h-full object-cover' : 'h-auto object-cover'}`}
         src={src}
         poster={poster}
         playsInline
@@ -768,6 +768,7 @@ function Home() {
         <ClickToPlayVideo 
           src={`${import.meta.env.BASE_URL}videos/section-break-video-web.mp4`} 
           poster={`${import.meta.env.BASE_URL}images/video-poster.jpg`}
+          fillScreen
         />
       </section>
 

@@ -409,11 +409,16 @@ function Services() {
               {
                 icon: Clock,
                 title: 'When to Start',
+                content: 'You must be at least 16 weeks out from your first show to start Ongoing Coaching.',
                 timing: [
                   { weeks: '30+ weeks', desc: 'Best for multiple federations/categories' },
                   { weeks: '24+ weeks', desc: 'Ideal for 1 federation' },
                   { weeks: '16-24 weeks', desc: 'Sign up ASAP' },
                   { weeks: '16 weeks', desc: 'Hard cutoff — must complete 12 lessons before show day', warning: true },
+                ],
+                seasons: [
+                  { season: 'Season A (April–June)', cutoff: 'Start by JANUARY' },
+                  { season: 'Season B (Sept–Nov)', cutoff: 'Start by JUNE' },
                 ],
               },
               {
@@ -447,6 +452,19 @@ function Services() {
                               <span className={t.warning ? 'font-medium' : 'text-white/70'}>{t.desc}</span>
                             </div>
                           ))}
+                        </div>
+                      )}
+                      {item.seasons && (
+                        <div className="mt-6 pt-4 border-t border-white/10">
+                          <p className="text-sm text-white/60 mb-3">Season Cut-Off Dates:</p>
+                          <div className="space-y-2">
+                            {item.seasons.map((s, i) => (
+                              <div key={i} className="flex items-center gap-3">
+                                <span className="text-white/70 text-sm">{s.season}</span>
+                                <span className="text-brand-purple font-medium text-sm">→ {s.cutoff}</span>
+                              </div>
+                            ))}
+                          </div>
                         </div>
                       )}
                     </div>
